@@ -6,5 +6,63 @@
 
 {% block content %}
 
-  <h1>by emotion</h1>
+  <header class="header home-header">
+    <div class="container home-header__container">
+      <div class="home-header__container-left">
+        <div class="img-wrapper home-header__img-wrapper">
+          <div class="img home-header__img" style="background-image: url('./img/home.jpg')"></div>
+        </div>
+      </div>
+      <div class="home-header__container-right">
+        <div class="home-header__content">
+          <span class="descriptor home-header__descriptor">Без ГМО, антибіотиків та глютену</span>
+          <h1 class="h1 home-header__h1">Постачаємо заморожене м'ясо птиці та&nbsp;дичини</h1>
+          {{mixins.btn('Переглянути продукцію', 'home-header__btn')}}
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="bs-item">
+      <div class="container bs-item__container">
+        <div class="bs-item__text">
+          Відбірне м’ясо від польского виробника Cedrob. Більше 30 видів у наявності. 
+        </div>
+      </div>
+    </div>
+    <section class='section our-product'>
+      <div class='container section__container flex last'>
+        <div class="container__left container__left--grid">
+          <h2 class="h2">Наша продукція</h2>
+          {{mixins.link('Детальніше', 'our-product__btn', './production')}}
+        </div>
+        <div class="container__right container__right--grid">
+          <div class="production our-product__production">
+            <div class="production__item">
+              <div class="production__item-top">
+                <div class="img-wrapper production__img-wrapper">
+                  <img class="production__img" src='./img/production/1.png' alt="">
+                </div>
+              </div>
+              <div class="production__item-bottom">
+                <h3 class="h3 production__name">Птиця</h3>
+                <a class="production__link" href="#">{% include "partials/svg/_arrow-btn.html" %}</a>
+              </div>
+            </div>
+            <div class="production__item">
+              <div class="production__item-top">
+                <div class="img-wrapper production__img-wrapper">
+                  <img class="production__img" src='./img/production/1.png' alt="">
+                </div>
+              </div>
+              <div class="production__item-bottom">
+                <h3 class="h3 production__name">Дичина</h3>
+                <a class="production__link" href="#">{% include "partials/svg/_arrow-btn.html" %}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 {% endblock %}

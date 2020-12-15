@@ -8,8 +8,9 @@
 body {
   @include reg;
   color: var(--black);
+  background-color: var(--lg);
   line-height: 1.5em;
-  font-size: size(20, 16);
+  font-size: $def-size;
   height: var(--vh);
   overflow: hidden;
   padding-left: 100px;
@@ -35,4 +36,23 @@ body {
   width: 100%;
   height: auto;
   margin: auto;
+}
+
+.img {
+  @include cover;
+}
+
+.bs-item {
+  margin-top: size(200, 100);
+  font-size: size(48, 28);
+  color: #333;
+  line-height: 1.5em;
+}
+
+.bs-item__container {
+  padding-left: $g-offset2;
+}
+
+.bs-item__text {
+  max-width: 648px;
 }

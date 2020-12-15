@@ -1,6 +1,27 @@
 .container {
-  padding-left: size(146, 20);
-  padding-right: size(146, 20);
+  padding-left: $g-offset;
+  padding-right: $g-offset;
   width: 100%;
   position: relative;
+}
+
+.section__container {
+  padding-top: size(300, 120);
+  &.last {
+    padding-bottom: size(300, 120);
+  }
+  &.flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.container__left--grid {
+  width: 34.6%;
+  flex: 0 1 34.6%;
+}
+
+.container__right--grid {
+  width: 63.4%;
+  flex: 1 0 63.4%;
 }

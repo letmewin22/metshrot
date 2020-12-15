@@ -50,7 +50,7 @@ export default class SmoothScroll {
     const vs = new VirtualScroll(this.opts)
 
     vs.on((e: WheelEvent) => {
-      if (!isFixed()) {
+      if (!isFixed() && this.height > window.innerHeight) {
         if (state.target === undefined) {
           this.targetY += e.deltaY
           state.target = e.deltaY

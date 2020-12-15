@@ -1,0 +1,41 @@
+.btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: white;
+  padding: 19px 30px 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  line-height: 1em;
+  font-size: size(18, 16);
+  font-family: inherit;
+  transition: opacity 0.2s ease;
+  &:hover,
+  &:focus {
+    .btn__overlay {
+      transform: translateY(0%);
+      border-radius: 0%;
+    }
+  }
+}
+
+.btn__overlay {
+  background-color: white;
+  opacity: 0.2;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  transform: translateY(110%);
+  border-radius: 50%;
+  transition: transform 0.45s $easing, border-radius 0.45s $easing;
+}
+
+.btn__text {
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}

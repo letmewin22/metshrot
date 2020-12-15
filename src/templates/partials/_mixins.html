@@ -1,7 +1,13 @@
-{% macro h2(text, selector) %}
-  <div class="h2-wrapper">
-    <div class="h2__line h2__line--before"></div>
-    <h2 class="h2 {{selector}}">{{text|safe}}</h2>
-    <div class="h2__line h2__line--after"></div>
-  </div>
+{% macro btn(text, selector) %}
+  <button class="btn {{selector}}">
+    <span class="btn__text">{{text}}</span>
+    <span class="btn__overlay"></span>
+  </button>
+{% endmacro %}
+
+{% macro link(text, selector, href = "#") %}
+  <a href="{{href}}" class="btn {{selector}}">
+    <span class="btn__text">{{text}}</span>
+    <span class="btn__overlay"></span>
+  </a>
 {% endmacro %}

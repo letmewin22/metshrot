@@ -1,0 +1,19 @@
+.h1,
+.h2 {
+  @include reg;
+  font-size: size(80, 42);
+  line-height: 1.25em;
+  text-transform: uppercase;
+}
+
+.h3 {
+  @include reg;
+  font-size: size(40, 24);
+  line-height: 1em;
+}
+
+.descriptor {
+  text-transform: uppercase;
+  font-size: size(16, 14);
+  @include medium;
+}
