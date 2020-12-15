@@ -1,0 +1,27 @@
+:root {
+  --black: #131116;
+  --accent: #a03adb;
+  --lg: #f1f1f1;
+  --red: #e73737;
+}
+
+//screen config
+$maxWidth: 1920;
+$minWidth: 375;
+
+//breakpoints
+$uls: 2100px;
+$ls: 1366px;
+$br1: 1060px;
+$br2: 960px;
+$br3: 768px;
+$br4: 460px;
+
+//fonts
+$def-size: size(24, 16);
+
+//easings
+$easing: cubic-bezier(0.16, 1, 0.3, 1);
+
+// layouts
+$g-offset: size(160, 20);
