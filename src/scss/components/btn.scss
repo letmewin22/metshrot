@@ -1,5 +1,6 @@
 .btn {
-  display: inline-block;
+  display: block;
+  width: fit-content;
   background-color: var(--accent);
   color: white;
   padding: 19px 30px 20px;

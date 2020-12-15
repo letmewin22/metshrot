@@ -3,12 +3,9 @@
   padding-right: $g-offset;
   width: 100%;
   position: relative;
-}
-
-.section__container {
-  padding-top: size(300, 120);
-  &.last {
-    padding-bottom: size(300, 120);
+  &.nm {
+    padding-left: 0;
+    padding-right: 0;
   }
   &.flex {
     display: flex;
@@ -16,12 +13,20 @@
   }
 }
 
+.section__container {
+  padding-top: $v-padding;
+  &.last {
+    padding-bottom: $v-padding;
+  }
+}
+
 .container__left--grid {
-  width: 34.6%;
-  flex: 0 1 34.6%;
+  width: 36.6%;
+  flex: 0 1 36.6%;
 }
 
 .container__right--grid {
   width: 63.4%;
   flex: 1 0 63.4%;
+  margin-left: size(60, 40);
 }

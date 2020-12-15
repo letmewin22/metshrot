@@ -17,3 +17,11 @@
   font-size: size(16, 14);
   @include medium;
 }
+
+.lw {
+  max-width: 50vw;
+}
+
+.sw {
+  max-width: 584px;
+}

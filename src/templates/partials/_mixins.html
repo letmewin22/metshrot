@@ -11,3 +11,10 @@
     <span class="btn__overlay"></span>
   </a>
 {% endmacro %}
+
+{% macro circleLink(selector, href = "#") %}
+  <a class="circle-link {{selector}}" href="{{href}}">
+    <span class="circle-link__circle"></span>
+    {% include "partials/svg/_arrow-btn.html" %}
+  </a>
+{% endmacro %}

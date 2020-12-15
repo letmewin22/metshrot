@@ -2,6 +2,7 @@
   --black: #130f10;
   --accent: #27ae60;
   --lg: #f5f5f5;
+  --g: #dbdbdb;
   --red: #e73737;
 }
 
@@ -26,3 +27,5 @@ $easing: cubic-bezier(0.22, 1, 0.36, 1);
 // layouts
 $g-offset: size(160, 20);
 $g-offset2: size(320, 40);
+$v-padding: size(300, 120);
+$v-margin: size(80, 32);

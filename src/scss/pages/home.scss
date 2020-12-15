@@ -44,3 +44,72 @@
 .our-product__btn {
   margin-top: size(40, 24);
 }
+
+.about-product__container {
+  margin-top: $v-margin;
+}
+
+.about-product__img {
+  padding-bottom: toimg(1016, 382);
+  height: 0px;
+}
+
+.about-product__items {
+  margin-top: $v-margin;
+  border-radius: 5px;
+  background-color: white;
+}
+
+@mixin bb {
+  border-bottom: 1px solid var(--g);
+  &:last-child {
+    border-color: transparent;
+  }
+}
+
+.about-product__li {
+  padding: 40px 52px;
+  line-height: 1.5em;
+  font-size: size(30, 20);
+  @include bb;
+}
+
+.advantages__ul {
+  margin-top: $v-margin;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.advantages__li {
+  padding: size(52, 32) size(52, 20) !important;
+  @include bb;
+}
+
+.advantages__count {
+  @include mono;
+  font-size: size(80, 24);
+  color: var(--g);
+  line-height: 1em;
+}
+
+.advantages__text {
+  font-size: size(30, 20);
+  line-height: 1.5em;
+}
+
+.about-company__text-content {
+  display: flex;
+}
+
+.about-company__text {
+  width: 50%;
+  flex: 0 1 50%;
+  + .about-company__text {
+    margin-left: size(60, 40);
+  }
+}
+
+.about-company__btn {
+  margin: 0 auto;
+  margin-top: $v-margin;
+}
