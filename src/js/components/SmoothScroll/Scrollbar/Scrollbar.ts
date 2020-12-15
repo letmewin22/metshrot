@@ -7,7 +7,6 @@ import {raf} from '@/utils/RAF'
 import {IScrollBar} from './IScrollbar'
 
 export default class ScrollBar implements IScrollBar {
-
   scrollbar: HTMLElement
   private inactiveDelay: number
   private timer: number
@@ -32,7 +31,7 @@ export default class ScrollBar implements IScrollBar {
     this.inactiveDelay = 1
     this.timer = 0
     this.el && (this.elHeight = this.el.getBoundingClientRect().height)
-    this.max = (this.elHeight - window.innerHeight) * -1
+    this.max = this.elHeight - window.innerHeight
 
     this.active = () => {
       this.timer = 0
@@ -60,9 +59,9 @@ export default class ScrollBar implements IScrollBar {
   setHeight(): void {
     const wh = window.innerHeight
     this.height = wh * (wh / this.el.scrollHeight)
-    this.elHeight = this.el.getBoundingClientRect().height
+    this.elHeight = this.el.scrollHeight
 
-    this.max = (this.elHeight - window.innerHeight) * -1
+    this.max = this.elHeight - window.innerHeight
     if (this.el.scrollHeight === wh) this.height = 0
 
     this.thumb.style.height = this.height + 'px'
@@ -86,13 +85,14 @@ export default class ScrollBar implements IScrollBar {
   events(): void {
     const progressUpdate = (e: any) => {
       const h = this.scrollbar.offsetHeight
-      let target : number
-      let o : number
+      let target: number
+      let o: number
 
       state.scrollbar = true
 
-      const changePos = (o : number) => {
-        target = clamp(-this.el.scrollHeight * (o / h), 0, this.max)
+      const changePos = (o: number) => {
+        target = clamp(this.el.scrollHeight * (o / h), 0, this.max)
+        console.log(this.max)
         gsap.to(state, {
           duration: 0.1,
           target,

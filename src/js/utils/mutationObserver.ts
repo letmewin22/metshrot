@@ -1,10 +1,12 @@
 type TFunc = {
-  t: HTMLElement,
+  t: HTMLElement | Element
   cb: () => void
 }
 
-const mutationObserver = (target: TFunc['t'], outsideCallback: TFunc['cb']): void => {
-
+const mutationObserver = (
+  target: TFunc['t'],
+  outsideCallback: TFunc['cb']
+): void => {
   const config = {
     childList: true
   }
@@ -12,7 +14,6 @@ const mutationObserver = (target: TFunc['t'], outsideCallback: TFunc['cb']): voi
   const callback = function(mutationsList) {
     for (const mutation of mutationsList) {
       if (mutation.type === 'childList') {
-
         outsideCallback()
         // console.log('A child node has been added or removed.')
       }
@@ -21,7 +22,6 @@ const mutationObserver = (target: TFunc['t'], outsideCallback: TFunc['cb']): voi
   const observer = new MutationObserver(callback)
 
   observer.observe(target, config)
-
 }
 
 export default mutationObserver

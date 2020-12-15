@@ -44,7 +44,8 @@ export const render = <T>(H: T): void => {
       '@/components/SmoothScroll/SmoothScroll'
     ).then(module => {
       const SmoothScroll = module.default
-      smoothScroll = new SmoothScroll('#scroll-container')
+      const sc = document.querySelector('#scroll-container')
+      smoothScroll = new SmoothScroll({el: sc})
     })
   })
 
