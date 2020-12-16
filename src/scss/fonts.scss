@@ -4,12 +4,19 @@
   font-size: size(80, 42);
   line-height: 1.25em;
   text-transform: uppercase;
+  margin-top: -0.25em;
 }
 
 .h3 {
   @include reg;
   font-size: size(40, 24);
   line-height: 1em;
+}
+
+.h4 {
+  @include medium;
+  font-size: size(24, 18);
+  line-height: 1.5em;
 }
 
 .descriptor {

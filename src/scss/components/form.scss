@@ -1,7 +1,5 @@
 .form {
-  margin: 0 auto;
-  margin-top: 60px;
-  width: 800px;
+  width: 100%;
   position: relative;
   &.loading {
     .form__btn-text {
@@ -13,29 +11,36 @@
       visibility: visible;
     }
   }
+  &.error {
+    .form__error-message {
+      margin-top: 40px;
+      height: var(--h);
+    }
+  }
 }
 
 .input-container {
   position: relative;
   width: 100%;
-  margin-top: 80px;
+  + .input-container {
+    margin-top: size(36, 32);
+  }
 }
 
 .input {
-  background-color: transparent;
+  background-color: white;
   width: 100%;
-  border-bottom: 1px solid black;
-  padding-bottom: 10px;
+  padding: 24px 20px;
+  border-radius: 5px;
   line-height: 1em;
   font-size: inherit;
+  @include reg;
   transition: border-color 0.3s ease;
   &:focus,
   &.js-focus {
-    border-color: var(--accent);
     ~ .label {
-      transform: translateY(-20px);
-      font-size: 14px;
-      color: var(--accent);
+      opacity: 0;
+      transform: translate(20px, -50%);
     }
   }
   &.error {
@@ -58,11 +63,12 @@
 
 .label {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   line-height: 1em;
   pointer-events: none;
-  transition: font-size 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .input-validate {
@@ -83,9 +89,19 @@ textarea {
   overflow-y: hidden;
   padding: 0px;
   margin: 0;
-  min-height: 3rem;
+  min-height: 160px;
   outline: none;
   padding-top: 10px;
+  ~ .label {
+    transform: translateY(0px);
+    top: 20px;
+  }
+  &:focus,
+  &.js-focus {
+    ~ .label {
+      transform: translate(20px, 0px) !important;
+    }
+  }
 }
 
 input:-webkit-autofill,
@@ -97,7 +113,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: black;
+  -webkit-text-fill-color: var(--black);
   box-shadow: 0 0 0px 1000px white inset;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -138,4 +154,19 @@ select:-webkit-autofill:focus {
   position: relative;
   z-index: 1;
   transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.form__error-message {
+  background: white;
+  color: var(--red);
+  width: 100%;
+  margin-top: 0px;
+  overflow: hidden;
+  height: 0px;
+  border-radius: 5px;
+  transition: height 0.4s ease, margin-top 0.4s ease;
+}
+
+.form__error-message-text {
+  margin: 10px 20px;
 }

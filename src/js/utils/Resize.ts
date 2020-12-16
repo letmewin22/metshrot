@@ -1,3 +1,5 @@
+import {debounce} from 'debounce'
+
 type TFunc = () => void
 
 class Resize {
@@ -9,14 +11,14 @@ class Resize {
   }
 
   bounds() {
-    ['resizeHandler', 'debounce'].forEach(fn => {
+    ['resizeHandler'].forEach(fn => {
       this[fn] = this[fn].bind(this)
     })
   }
 
   init() {
     this.bounds()
-    this.debounced = this.debounce(this.resizeHandler, 60)
+    this.debounced = debounce(this.resizeHandler, 60)
     window.addEventListener('resize', this.debounced)
   }
 
@@ -31,16 +33,6 @@ class Resize {
 
   off(cb: TFunc): void {
     this.cbArray = this.cbArray.filter(e => e !== cb)
-  }
-
-  debounce(func: TFunc, wait = 100): TFunc {
-    let timeout
-    return function(...args) {
-      clearTimeout(timeout)
-      timeout = setTimeout(() => {
-        func.apply(null, ...args)
-      }, wait)
-    }
   }
 
   destroy() {

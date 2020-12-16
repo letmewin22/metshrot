@@ -92,7 +92,6 @@ export default class ScrollBar implements IScrollBar {
 
       const changePos = (o: number) => {
         target = clamp(this.el.scrollHeight * (o / h), 0, this.max)
-        console.log(this.max)
         gsap.to(state, {
           duration: 0.1,
           target,

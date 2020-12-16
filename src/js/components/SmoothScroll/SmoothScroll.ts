@@ -1,33 +1,25 @@
 import VirtualScroll from 'virtual-scroll'
+
 import {IScrollBar} from './Scrollbar/IScrollbar'
 import ScrollBar from './Scrollbar/ScrollBar'
 import {state} from '@/state'
 
 import {clamp, lerp} from '@/utils/math'
-import mutationObserver from '@/utils/mutationObserver'
 import {raf} from '@/utils/RAF'
 import {resize} from '@/utils/Resize'
-import {IOpts} from './ISmoothScrollOpts'
+import {getOpts, IOpts} from './opts'
+import {isFixed} from '@/utils/isFixed'
 
 export default class SmoothScroll {
-  current = 0
-  min = 0
   max: number
   vs: typeof VirtualScroll
   scrollbar: IScrollBar
 
-  constructor(protected opts: IOpts) {
-    this.opts = {
-      el: opts.el ?? document.documentElement,
-      touchMultiplier: opts.touchMultiplier ?? 3.8,
-      firefoxMultiplier: opts.firefoxMultiplier ?? 40,
-      preventTouch: opts.preventTouch ?? true,
-      scrollbar: opts.scrollbar ?? true,
-      easing: opts.easing ?? 0.08,
-      mobile: opts.mobile ?? true,
-      breakpoint: opts.breakpoint ?? 960
-    }
+  current = 0
+  min = 0
 
+  constructor(protected opts: IOpts) {
+    this.opts = getOpts(opts)
     this.init()
   }
 
@@ -40,9 +32,9 @@ export default class SmoothScroll {
     this.bounds()
 
     resize.on(this.resize)
-    mutationObserver(this.opts.el, this.resize)
 
     state.target = 0
+    this.max = this.maxValue
     this.scroll()
 
     raf.on(this.animate)
@@ -50,24 +42,28 @@ export default class SmoothScroll {
   }
 
   resize(): void {
-    this.max = this.opts.el.scrollHeight - window.innerHeight
     if (!this.opts.mobile && window.innerWidth <= this.opts.breakpoint) {
       this.destroy()
     }
   }
 
+  get maxValue(): number {
+    return this.opts.el.scrollHeight - window.innerHeight
+  }
+
   scroll(): void {
-    this.vs = new VirtualScroll({
-      el: this.opts.el,
-      touchMultiplier: this.opts.touchMultiplier,
-      firefoxMultiplier: this.opts.firefoxMultiplier,
-      preventTouch: this.opts.preventTouch
-    })
+    this.vs = new VirtualScroll({...this.opts})
 
     this.vs.on((e: WheelEvent) => {
-      state.target -= e.deltaY
-      state.target = clamp(state.target, this.min, this.max)
+      if (this.canScroll) {
+        state.target -= e.deltaY * this.opts.stepSize
+        state.target = clamp(state.target, this.min, this.max)
+      }
     })
+  }
+
+  get canScroll(): boolean {
+    return !isFixed() && this.opts.el.scrollHeight > window.innerHeight
   }
 
   detectScrolling(): void {
@@ -85,7 +81,8 @@ export default class SmoothScroll {
     this.detectScrolling()
 
     if (state.scrolling) {
-      this.current = lerp(this.current, state.target, this.opts.easing)
+      this.max = this.maxValue
+      this.current = lerp(this.current, state.target, this.opts.friction)
       this.current = Math.round(this.current * 100) / 100
       this.opts.el.scrollTop = this.current
       state.scrolled = this.current

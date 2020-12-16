@@ -12,9 +12,17 @@
   </a>
 {% endmacro %}
 
-{% macro circleLink(selector, href = "#") %}
+{% import "partials/svg/_button-svg.html" as content %}
+
+{% macro circleLink(selector, href = "#", type = 'arrow') %}
   <a class="circle-link {{selector}}" href="{{href}}">
     <span class="circle-link__circle"></span>
-    {% include "partials/svg/_arrow-btn.html" %}
+    {% if type === 'arrow' %}
+    {{content.arrow() | safe}}
+    {% elif type === 'fb' %}
+    {{content.fb() | safe}}
+    {% elif type === 'insta' %}
+    {{content.insta() | safe}}
+    {% endif %}
   </a>
 {% endmacro %}

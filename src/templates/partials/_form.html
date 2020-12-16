@@ -1,0 +1,43 @@
+<form id="form" class="form" novalidate>
+
+  <div class="input-container form__input-container">
+    <input 
+        data-input
+        type="text" 
+        class="input form__input" 
+        name="Ваше ім’я" 
+        id="name"
+      >
+    <label class="label form__label" for="name">Ваше ім’я</label>
+  </div>
+
+  <div class="input-container form__input-container">
+    <input 
+        data-input 
+        data-validation="notEmpty phone" 
+        type="tel"
+        class="input form__input" 
+        name="Ваш телефон" 
+        id="phone"
+      >
+    <label class="label form__label" for="phone">Ваш телефон</label>
+    <div class="input-validate form__input-validate">Введіть корректний номер</div>
+  </div>
+
+  <div class="input-container form__input-container">
+    <textarea 
+      data-input 
+      data-validation="maxlength(300)" 
+      class="input form__input" 
+      name="Ваші питання"
+      id="questions"
+      ></textarea>
+    <label class="label form__label" for="questions">Ваші питання</label>
+    <div data-length class="length-counter form__length-counter">300</div>
+    <div class="input-validate form__input-validate">Не більше 300 симолів</div>
+  </div>
+  <div data-error class="form__error-message">
+    <div class="form__error-message-text">Вибачте, вийшла помилка</div>
+  </div>
+  {{mixins.btn('Надіслати запит', 'form__btn')}}
+</form>

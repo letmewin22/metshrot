@@ -10,6 +10,7 @@ import {TSmoothScroll} from '@/components/SmoothScroll/SmoothScroll'
 import bgWebP from '@/utils/bgWebP'
 import {resize} from '@/utils/Resize'
 import {winH} from '@/utils/winH'
+import NavbarPos from '@/utils/navbarPos'
 
 export const render = <T>(H: T): void => {
   process.env.NODE_ENV === 'production' && cssWebP()
@@ -36,8 +37,8 @@ export const render = <T>(H: T): void => {
   hooks.useLoad(() => {
     resize.on(winH)
 
-    // const navbarPos = new NavbarPos()
-    // navbarPos.init()
+    const navbarPos = new NavbarPos()
+    navbarPos.init()
 
     void import(
       /* webpackChunkName: "smooth-scroll" */
@@ -57,10 +58,9 @@ export const render = <T>(H: T): void => {
       '@emotionagency/form'
     ).then(module => {
       const Form = module.default
-      const form = new Form('#form', {
+      new Form('#form', {
         URL: 'http://localhost:8080/api/mail.php'
       })
-      form.addFocus(0)
     })
 
     links.forEach((link: HTMLLinkElement) => {

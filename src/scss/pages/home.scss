@@ -3,16 +3,7 @@
   width: 100%;
   position: relative;
 }
-.home-header__container {
-  padding-left: 0;
-  display: flex;
-  height: 100%;
-}
 
-.home-header__container-left {
-  width: 50vw;
-  height: 100%;
-}
 .home-header__img-wrapper {
   height: 100%;
   width: 100%;
@@ -22,13 +13,7 @@
   height: 100%;
   width: 100%;
 }
-.home-header__container-right {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 168px;
-}
+
 .home-header__content {
   max-width: 26em;
 }
@@ -112,4 +97,40 @@
 .about-company__btn {
   margin: 0 auto;
   margin-top: $v-margin;
+}
+
+.partnership__container {
+  align-items: center;
+}
+
+.partnership__img {
+  padding-bottom: toimg(960, 641);
+}
+
+.partnership__text {
+  margin-top: size(40, 32);
+  p + p {
+    margin-top: size(32, 24);
+  }
+}
+
+.partnership__btn {
+  margin-top: size(40, 32);
+}
+
+.partners__items {
+  margin-top: $v-margin;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+}
+
+.partners__li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  height: 240px;
 }
