@@ -13,6 +13,7 @@ body {
   font-size: $def-size;
   height: var(--vh);
   overflow: hidden;
+  opacity: 0;
 }
 
 .e-fixed {
@@ -72,4 +73,10 @@ body {
 .sticky {
   position: sticky;
   top: 110px;
+}
+
+.parallax-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }

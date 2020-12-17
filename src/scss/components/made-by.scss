@@ -1,7 +1,7 @@
 .made-by {
   display: flex;
   align-items: center;
-  @include media('>=#{$br2}') {
+  @include media('>#{$br2}') {
     &:hover {
       .made-by__text {
         color: var(--accent);

@@ -9,12 +9,14 @@
   <header class="header home-header">
     <div class="container full-container home-header__container full-container--no-left-margin">
       <div class="full-container__left home-header__container-left">
-        <div class="img-wrapper home-header__img-wrapper">
-          <div class="img home-header__img" style="background-image: url('./img/home.jpg')"></div>
+        <div class="parallax-wrapper home-header__parallax-wrapper">
+          <div data-parallax='0.3' class="img-wrapper home-header__img-wrapper">
+            <div data-parallax='-0.2' class="img home-header__img" style="background-image: url('./img/home.jpg')"></div>
+          </div>
         </div>
       </div>
       <div class="full-container__right home-header__container-right">
-        <div class="home-header__content">
+        <div data-section-parallax="-0.2" class="home-header__content">
           <span class="descriptor home-header__descriptor">Без ГМО, антибіотиків та глютену</span>
           <h1 class="h1 home-header__h1">Постачаємо заморожене м'ясо птиці та&nbsp;дичини</h1>
           {{mixins.btn('Переглянути продукцію', 'home-header__btn')}}
@@ -34,8 +36,8 @@
       <div class='container section__container our-product__container flex'>
         <div class="container__left our-product__container-left">
           <div class="our-product__left-content sticky">
-          <h2 class="h2">Наша продукція</h2>
-          {{mixins.link('Детальніше', 'our-product__btn', './production')}}
+            <h2 class="h2">Наша продукція</h2>
+            {{mixins.link('Детальніше', 'our-product__btn', './production')}}
           </div>
         </div>
         <div class="container__right container__right our-product__container-right">
@@ -81,8 +83,10 @@
 
           </div>
           <div class="container__right container__right">
-            <div class="img-wrapper about-product__img-wrapper">
-              <div class="img about-product__img" style="background-image: url('./img/home.jpg')"></div>
+            <div class="parallax-wrapper">
+              <div data-parallax='0.3' data-scale="1" class="img-wrapper about-product__img-wrapper">
+                <div data-parallax='-0.2' data-scale="1.1" class="img about-product__img" style="background-image: url('./img/home.jpg')"></div>
+              </div>
             </div>
             <ul class="about-product__items">
               <li class="about-product__li">Мясо без ГМО, антибіотиків та глютену </li>
@@ -152,8 +156,10 @@
     <section class='section partnership'>
       <div class='container full-container full-container--no-left-margin section__container partnership__container'>
         <div class="full-container__left">
-          <div class="img-wrapper partnership__img-wrapper">
-            <div class="img partnership__img" style="background-image: url('./img/home.jpg')"></div>
+          <div class="parallax-wrapper">
+            <div data-parallax='0.3' class="img-wrapper partnership__img-wrapper">
+              <div data-parallax='-0.2' data-scale='1.1' class="img partnership__img" style="background-image: url('./img/home.jpg')"></div>
+            </div>
           </div>
         </div>
         <div class="full-container__right ">

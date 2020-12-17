@@ -19,7 +19,7 @@
 }
 
 .dropdown__content {
-  @include media('>=#{$br2}') {
+  @include media('>#{$br2}') {
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);

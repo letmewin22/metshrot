@@ -13,6 +13,8 @@ import {winH} from '@/utils/winH'
 import NavbarPos from '@/utils/navbarPos'
 import Dropdown from '@/components/Dropdown'
 import {Nav} from '@/components/Nav'
+import {Parallax} from '@/components/Parallax'
+import {intersectionOvserver} from '@/utils/intersectionOvserver'
 
 export const render = <T>(H: T): void => {
   process.env.NODE_ENV === 'production' && cssWebP()
@@ -50,6 +52,16 @@ export const render = <T>(H: T): void => {
     dropdown.init()
 
     new Nav()
+    new Parallax()
+
+    const sections = [
+      ...document.querySelectorAll('header'),
+      ...document.querySelectorAll('.section'),
+      ...document.querySelectorAll('footer')
+    ] as HTMLElement[]
+    sections.forEach(section => {
+      intersectionOvserver(section).on()
+    })
 
     const {SmoothScroll} = await import(
       /* webpackChunkName: "smooth-scroll" */

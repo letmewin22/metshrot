@@ -1,5 +1,5 @@
 import noop from './noop'
-import {raf} from './RAF'
+import {raf} from '@emotionagency/utils'
 
 type TIO = {
   on: () => void
@@ -8,8 +8,7 @@ type TIO = {
 
 type TFunc = () => void
 
-export const intersectionOvserver = (el: HTMLElement, cb: TFunc): TIO => {
-
+export const intersectionOvserver = (el: HTMLElement, cb?: TFunc): TIO => {
   cb = cb ?? noop
   const b = el.getBoundingClientRect()
 

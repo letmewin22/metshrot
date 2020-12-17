@@ -87,7 +87,7 @@
     background-color: var(--accent);
     transition: width 0.6s $easing;
   }
-  @include media('>=#{$br2}') {
+  @include media('>#{$br2}') {
     &:hover {
       color: var(--accent);
       &::after {

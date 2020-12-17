@@ -9,7 +9,7 @@
   overflow: hidden;
   padding: 2px;
   padding-left: 0px;
-  @include media('>=#{$br2}') {
+  @include media('>#{$br2}') {
     &:hover {
       .scrollbar__thumb {
         width: 10px;

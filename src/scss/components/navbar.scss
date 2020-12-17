@@ -23,7 +23,7 @@
     display: block;
     max-width: 100%;
   }
-  width: size(162, 82);
+  width: size(162, 90);
 }
 
 .navbar__nav {
@@ -61,7 +61,7 @@
 .navbar__li {
   cursor: pointer;
   + .navbar__li {
-    @include media('>=#{$br2}') {
+    @include media('>#{$br2}') {
       margin-left: size(84, 40);
       margin-top: 0px;
     }
@@ -108,10 +108,12 @@
   width: 30px;
   background-color: transparent;
   display: none;
+  transition: transform 0.7s ease;
   @include media('<=#{$br2}') {
     display: block;
   }
   &.active {
+    transform: rotate(180deg);
     .navbar__burger-line--1 {
       transform: translateY(9px) rotate(45deg);
     }
