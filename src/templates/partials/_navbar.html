@@ -5,7 +5,7 @@
 <div class="navbar">
   <div class="container navbar__container">
     <a href="#" class="logo navbar__logo"><img src="./img/logo.png" alt="logo"></a>
-    <nav class="navbar__nav">
+    <nav data-move="navbar__mobile-nav,1,960" class="navbar__nav">
       <ul class="navbar__ul">
         <li class="navbar__li dropdown-btn">Продукція {{chevron|safe}}</li>
         <li class="navbar__li"><a href="#">Про компанію</a></li>
@@ -13,5 +13,11 @@
       </ul>
       <a href="tel:+380502552772" class="navbar__phone">+38 (050) 255 27 72</a>
     </nav>
+    <button aria-label="navigation" class="navbar__burger">
+      <span class="navbar__burger-line navbar__burger-line--1"></span>
+      <span class="navbar__burger-line navbar__burger-line--2"></span>
+      <span class="navbar__burger-line navbar__burger-line--3"></span>
+    </button>
   </div>
+  <div class="navbar__mobile-nav"></div>
 </div>

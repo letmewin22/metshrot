@@ -12,14 +12,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: size(30, 18);
+  padding-bottom: size(30, 18);
+}
+
+.navbar__logo {
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  width: size(162, 82);
 }
 
 .navbar__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include media('<=#{$br2}') {
+    padding-left: size(60, 20);
+    padding-right: size(60, 20);
+    padding-bottom: 120px;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: start;
+    height: 100%;
+  }
 }
 
 .navbar__ul {
@@ -27,13 +44,22 @@
   text-transform: uppercase;
   line-height: 1em;
   display: flex;
-  margin-right: size(161, 100);
+  margin-right: size(161, 40);
+  @include media('<=#{$br2}') {
+    flex-direction: column;
+    align-items: start;
+    font-size: 32px;
+  }
 }
 
 .navbar__li {
   cursor: pointer;
   + .navbar__li {
-    margin-left: size(84, 40);
+    @include media('>=#{$br2}') {
+      margin-left: size(84, 40);
+      margin-top: 0px;
+    }
+    margin-top: 24px;
   }
   @include stroke-link;
 }
@@ -50,11 +76,56 @@
       stroke: var(--black);
     }
   }
+  @include media('<=#{$br2}') {
+    svg {
+      margin-left: 14px;
+      width: 20px;
+      height: 10px;
+    }
+    svg path {
+      stroke: white;
+    }
+  }
 }
 
 .navbar__phone {
   display: block;
   line-height: 1em;
-  font-size: 20px;
+  font-size: size(20, 14);
   @include stroke-link;
+  @include media('<=#{$br2}') {
+    font-size: 20px;
+  }
+}
+
+.navbar__burger {
+  width: 30px;
+  background-color: transparent;
+  display: none;
+  @include media('<=#{$br2}') {
+    display: block;
+  }
+}
+
+.navbar__burger-line {
+  display: block;
+  margin-top: 6px;
+  height: 2px;
+  width: 100%;
+  background-color: var(--black);
+}
+
+.navbar__burger-line--1 {
+  margin-top: 0px;
+}
+
+.navbar__mobile-nav {
+  @include media('<=#{$br2}') {
+    position: absolute;
+    width: 100%;
+    height: var(--vh);
+    background-color: var(--black);
+    color: white;
+    display: none;
+  }
 }

@@ -27,8 +27,14 @@
 
 .lw {
   max-width: 50vw;
+  @include media('<=#{$br2}') {
+    max-width: none;
+  }
 }
 
 .sw {
   max-width: 584px;
+  @include media('<=#{$br2}') {
+    max-width: none;
+  }
 }

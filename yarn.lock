@@ -887,6 +887,13 @@
   resolved "https://registry.yarnpkg.com/@emotionagency/form/-/form-0.1.5.tgz#f9c1307d7eee6a3aeee24c45db3f6c4f01314676"
   integrity sha512-FDrmX1BVUKFTt/R1ZpK7znsqqGWj64VDLe4NYTrELlvJPp/YlSHAllzxTxluf1zT0ESa6Xj4OIaFHQXn06XapQ==
 
+"@emotionagency/utils@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@emotionagency/utils/-/utils-0.0.3.tgz#027e2252b7d699598a0ff4c41c89090456dff182"
+  integrity sha512-CmXuNgpeNEdxW1tVz0O+TsOgrqRdS9wjgiuRffwDXkS3LZaVSmRepGDGr78kIF0y9D6UFQZVYeQwYbkhktnqcw==
+  dependencies:
+    debounce "^1.2.0"
+
 "@eslint/eslintrc@^0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.2.1.tgz#f72069c330461a06684d119384435e12a5d76e3c"

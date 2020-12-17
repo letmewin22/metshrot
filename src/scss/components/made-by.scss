@@ -16,6 +16,9 @@
       }
     }
   }
+  @include media('<=#{$br3}') {
+    margin-top: 10px;
+  }
 }
 .made-by__text {
   font-size: 14px;

@@ -7,7 +7,7 @@
 {% block content %}
 
   <header class="header home-header">
-    <div class="container home-header__container full-container full-container--no-left-margin">
+    <div class="container full-container home-header__container full-container--no-left-margin">
       <div class="full-container__left home-header__container-left">
         <div class="img-wrapper home-header__img-wrapper">
           <div class="img home-header__img" style="background-image: url('./img/home.jpg')"></div>
@@ -31,14 +31,14 @@
       </div>
     </div>
     <section class='section our-product'>
-      <div class='container section__container flex'>
-        <div class="container__left">
+      <div class='container section__container our-product__container flex'>
+        <div class="container__left our-product__container-left">
           <div class="our-product__left-content sticky">
           <h2 class="h2">Наша продукція</h2>
           {{mixins.link('Детальніше', 'our-product__btn', './production')}}
           </div>
         </div>
-        <div class="container__right container__right">
+        <div class="container__right container__right our-product__container-right">
           <div class="production our-product__production">
             <div class="production__item">
               <div class="production__item-top">
@@ -135,11 +135,11 @@
     </section>
     <section class='section about-company'>
       <div class='container section__container'>
-        <div class='container nm flex'>
-          <div class="container__left">
+        <div class='container about-company__container nm flex'>
+          <div class="container__left about-company__container-left">
             <h2 class="h2">Про компанію</h2>
           </div>
-          <div class="container__right container__right">
+          <div class="container__right container__right about-company__container-right">
             <div class="about-company__text-content">
               <p class="about-company__text">Компанія METSHROT — офіційний дистриб'ютор замороженої м'ясної продукції ТМ GRUPA CEDROB. До асортименту продукції входить: курячий фарш, мясо птиці (качка, курчата-халяль) та дикого звіра (косуля, оленина). На ринку вже 5 років: за цей час наша продукція потрапила до найкращих українських рестораторів і полиць торгових мереж, та отримала їх заслужене схвалення. </p>
               <p class="about-company__text">Ми не конкуруємо з українськими виробниками м’яса, а надаємо споживачам вибір: у нас можна придбати птицю або дичину, яка вже 28 років представлена на ринку Польші, та займає перше місце по популярності у місцевих споживачів за стабільно високу якість та смакові характеристики.</p>
@@ -221,7 +221,7 @@
           </ul>
         </div>
       </div>
-      <div class="full-container__left">
+      <div class="full-container__left footer-container__left">
         <img src="./img/map.png" alt="">
       </div>
     </div>

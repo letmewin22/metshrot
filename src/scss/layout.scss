@@ -1,5 +1,5 @@
 .container {
-  padding-left: $g-offset;
+  padding-left: size(160, 20);
   padding-right: $g-offset;
   width: 100%;
   position: relative;
@@ -10,6 +10,13 @@
   &.flex {
     display: flex;
     justify-content: space-between;
+    @include media('<=#{$br2}') {
+      flex-direction: column;
+    }
+  }
+  @include media('<=#{$ls}') {
+    padding-left: size(60, 20);
+    padding-right: size(60, 20);
   }
 }
 
@@ -23,25 +30,50 @@
 .container__left {
   width: 36.6%;
   flex: 0 1 36.6%;
+  @include media('<=#{$br2}') {
+    width: 100%;
+  }
 }
 
 .container__right {
   width: 63.4%;
   flex: 1 0 63.4%;
   margin-left: size(60, 40);
+  @include media('<=#{$br2}') {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: $v-margin;
+  }
 }
 
 .full-container {
   display: flex;
   height: 100%;
+  @include media('<=#{$br2}') {
+    flex-direction: column;
+  }
 }
 
 .full-container--no-left-margin {
-  padding-left: 0;
+  padding-left: 0 !important;
+  @include media('<=#{$br2}') {
+    padding-right: 0 !important;
+    .full-container__right {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
 }
 
 .full-container--no-right-margin {
-  padding-right: 0;
+  padding-right: 0 !important;
+  @include media('<=#{$br2}') {
+    padding-left: 0 !important;
+    .full-container__right {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
 }
 
 .full-container__left {
@@ -49,6 +81,12 @@
   flex-shrink: 0;
   width: 50vw;
   height: 100%;
+  @include media('<=#{$br1}') {
+    width: 45vw;
+  }
+  @include media('<=#{$br2}') {
+    width: 100%;
+  }
 }
 
 .full-container__right {
@@ -58,6 +96,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 168px;
+  margin-left: vw(168);
   width: calc(100% - 50vw);
+  @include media('<=#{$br1}') {
+    width: calc(100% - 45vw);
+  }
+  @include media('<=#{$br2}') {
+    width: 100%;
+    margin-top: $v-margin;
+    margin-left: 0px;
+  }
 }

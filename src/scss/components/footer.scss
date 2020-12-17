@@ -8,6 +8,24 @@
 .footer__content {
   padding-top: size(150, 60);
   max-width: 26em;
+  @include media('<=#{$br3}') {
+    max-width: 300px;
+  }
+}
+
+.footer-container__left {
+  @include media('<=#{$br2}') {
+    margin-top: $v-margin;
+    height: 50vh;
+    min-height: 500px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
 }
 
 .footer__container-right {
@@ -50,6 +68,10 @@
   + .footer__contact--social {
     margin-left: size(28, 24);
   }
+  svg {
+    max-height: 100%;
+    height: size(24, 16);
+  }
 }
 
 .footer__bottom {
@@ -69,6 +91,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include media('<=#{$br3}') {
+    flex-direction: column;
+  }
 }
 
 .footer__copyright {

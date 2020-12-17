@@ -1,24 +1,22 @@
 import VirtualScroll from 'virtual-scroll'
+import {raf, resize} from '@emotionagency/utils'
 
-import {IScrollBar} from './Scrollbar/IScrollbar'
 import ScrollBar from './Scrollbar/ScrollBar'
-import {state} from '@/state'
+import {state} from './state'
 
 import {clamp, lerp} from '@/utils/math'
-import {raf} from '@/utils/RAF'
-import {resize} from '@/utils/Resize'
 import {getOpts, IOpts} from './opts'
 import {isFixed} from '@/utils/isFixed'
 
-export default class SmoothScroll {
+export class SmoothScroll {
   max: number
   vs: typeof VirtualScroll
-  scrollbar: IScrollBar
+  scrollbar: typeof ScrollBar.prototype
 
   current = 0
   min = 0
 
-  constructor(protected opts: IOpts) {
+  constructor(protected opts?: IOpts) {
     this.opts = getOpts(opts)
     this.init()
   }

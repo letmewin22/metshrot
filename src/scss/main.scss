@@ -57,10 +57,16 @@ body {
 
 .bs-item__container {
   padding-left: $g-offset2;
+  @include media('<=#{$ls}') {
+    padding-left: size(120, 20);
+  }
 }
 
 .bs-item__text {
   max-width: 648px;
+  @include media('<=#{$br2}') {
+    max-width: size(1548, 305);
+  }
 }
 
 .sticky {

@@ -34,33 +34,29 @@ export const render = <T>(H: T): void => {
     smoothScroll && smoothScroll.reset()
   })
 
-  hooks.useLoad(() => {
+  hooks.useLoad(async() => {
     resize.on(winH)
 
     const navbarPos = new NavbarPos()
     navbarPos.init()
 
-    void import(
+    const {SmoothScroll} = await import(
       /* webpackChunkName: "smooth-scroll" */
       '@/components/SmoothScroll/SmoothScroll'
-    ).then(module => {
-      const SmoothScroll = module.default
-      const sc = document.querySelector('#scroll-container')
-      smoothScroll = new SmoothScroll({el: sc})
-    })
+    )
+    smoothScroll = new SmoothScroll()
   })
 
   const links = document.querySelectorAll('nav a')
 
-  hooks.useBoth(() => {
-    void import(
+  hooks.useBoth(async() => {
+    const {default: Form} = await import(
       /* webpackChunkName: "form" */
       '@emotionagency/form'
-    ).then(module => {
-      const Form = module.default
-      new Form('#form', {
-        URL: 'http://localhost:8080/api/mail.php'
-      })
+    )
+
+    new Form('#form', {
+      URL: 'http://localhost:8080/api/mail.php'
     })
 
     links.forEach((link: HTMLLinkElement) => {
