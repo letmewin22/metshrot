@@ -11,6 +11,8 @@ import bgWebP from '@/utils/bgWebP'
 import {resize} from '@/utils/Resize'
 import {winH} from '@/utils/winH'
 import NavbarPos from '@/utils/navbarPos'
+import Dropdown from '@/components/Dropdown'
+import {Nav} from '@/components/Nav'
 
 export const render = <T>(H: T): void => {
   process.env.NODE_ENV === 'production' && cssWebP()
@@ -39,6 +41,15 @@ export const render = <T>(H: T): void => {
 
     const navbarPos = new NavbarPos()
     navbarPos.init()
+
+    const dropdown = new Dropdown({
+      btn: '.dropdown__btn',
+      items: '.dropdown__content',
+      parent: '.dropdown'
+    })
+    dropdown.init()
+
+    new Nav()
 
     const {SmoothScroll} = await import(
       /* webpackChunkName: "smooth-scroll" */

@@ -7,9 +7,21 @@
     <a href="#" class="logo navbar__logo"><img src="./img/logo.png" alt="logo"></a>
     <nav data-move="navbar__mobile-nav,1,960" class="navbar__nav">
       <ul class="navbar__ul">
-        <li class="navbar__li dropdown-btn">Продукція {{chevron|safe}}</li>
-        <li class="navbar__li"><a href="#">Про компанію</a></li>
-        <li class="navbar__li"><a href="#">Контакти</a></li>
+        <li class="navbar__li dropdown">
+          <div class="dropdown__btn">Продукція {{chevron|safe}}</div>
+          <div class="dropdown__content">
+            <div class="dropdown__links">
+              <a class="dropdown__link" href="#">Птиця</a>
+              <a class="dropdown__link" href="#">Дичина</a>
+            </div>
+          </div>
+        </li>
+        <li class="navbar__li">
+          <a href="#">Про компанію</a>
+        </li>
+        <li class="navbar__li">
+          <a href="#">Контакти</a>
+        </li>
       </ul>
       <a href="tel:+380502552772" class="navbar__phone">+38 (050) 255 27 72</a>
     </nav>
@@ -21,3 +33,12 @@
   </div>
   <div class="navbar__mobile-nav"></div>
 </div>
+
+{# <li class="navbar__list-item dropdown">
+  <a href="services.html" class="navbar__link dropdown__btn">Услуги {% include "partials/svg/_dropdown.html" %}</a>
+  <div class="dropdown__content">
+    <a href="./organization-of-transportation.html" class="navbar__link dropdown__link">Организация перевозок</a>
+    <a href="#" class="navbar__link dropdown__link">Аренда вагонов</a>
+    <a href="./carriage-repairs.html" class="navbar__link dropdown__link">Ремонт вагонов</a>
+  </div>
+</li> #}

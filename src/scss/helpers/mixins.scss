@@ -83,18 +83,21 @@
     height: 1px;
     left: 0;
     right: auto;
+    pointer-events: none;
     background-color: var(--accent);
     transition: width 0.6s $easing;
   }
-  &:hover {
-    color: var(--accent);
-    &::after {
-      width: 100%;
-      right: 0;
-      left: auto;
-    }
-    svg path {
-      stroke: var(--accent);
+  @include media('>=#{$br2}') {
+    &:hover {
+      color: var(--accent);
+      &::after {
+        width: 100%;
+        right: 0;
+        left: auto;
+      }
+      svg path {
+        stroke: var(--accent);
+      }
     }
   }
 }
