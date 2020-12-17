@@ -33,7 +33,7 @@
   @include media('<=#{$br2}') {
     padding-left: size(60, 20);
     padding-right: size(60, 20);
-    padding-bottom: 120px;
+    padding-bottom: 100px;
     padding-top: 60px;
     flex-direction: column;
     align-items: start;
@@ -53,6 +53,8 @@
     flex-direction: column;
     align-items: start;
     font-size: 32px;
+    max-height: 50vh;
+    overflow: scroll;
   }
 }
 
@@ -68,7 +70,7 @@
   @include stroke-link;
 }
 
-.dropdown-btn {
+.dropdown__btn {
   display: flex;
   justify-content: center;
   align-items: center;

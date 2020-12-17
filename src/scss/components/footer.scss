@@ -17,7 +17,7 @@
   @include media('<=#{$br2}') {
     margin-top: $v-margin;
     height: 50vh;
-    min-height: 500px;
+    min-height: 333px;
   }
   img {
     display: block;
