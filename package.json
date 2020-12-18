@@ -8,6 +8,7 @@
     "webpack": "webpack",
     "start": "gulp",
     "precommit": "lint-staged",
+    "ghpages": "git add build && git commit -m 'build commit' && git subtree push --prefix build origin gh-pages",
     "lint": "eslint --ignore-pattern 'src/js/libs/' --cache --format=node_modules/eslint-formatter-pretty src/js/",
     "lint-fix": "npm run lint -- --fix"
   },
@@ -81,6 +82,7 @@
     "@emotionagency/utils": "^0.0.3",
     "debounce": "^1.2.0",
     "gsap": "^3.3.4",
+    "gulp-webp-css": "^1.1.0",
     "virtual-scroll": "^1.5.2"
   }
 }

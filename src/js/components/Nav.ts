@@ -1,16 +1,23 @@
 export class Nav {
+  $els: NodeListOf<HTMLElement>
   $nav = document.querySelector('.navbar__mobile-nav') as HTMLElement
   $burger = document.querySelector('.navbar__burger') as HTMLElement
   isOpen = false
 
   constructor() {
+    this.$els = this.$nav.querySelectorAll('.navbar__li a')
     this.bounds()
-    this.$burger.addEventListener('click', this.toggle)
+    this.init()
   }
 
   bounds(): void {
-    const methods = ['toggle']
+    const methods = ['toggle', 'close']
     methods.forEach(fn => (this[fn] = this[fn].bind(this)))
+  }
+
+  init(): void {
+    this.$burger.addEventListener('click', this.toggle)
+    this.$els.forEach(el => el.addEventListener('click', this.close))
   }
 
   toggle(): void {
@@ -29,5 +36,10 @@ export class Nav {
     this.$burger.classList.remove('active')
     this.isOpen = false
     document.body.classList.remove('e-fixed')
+  }
+
+  destroy(): void {
+    this.$burger.removeEventListener('click', this.toggle)
+    this.$els.forEach(el => el.removeEventListener('click', this.close))
   }
 }

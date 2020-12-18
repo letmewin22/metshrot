@@ -22,6 +22,8 @@
 }
 
 .home-header__container-left {
+  transform: translateX(-100%);
+  overflow: hidden;
   @include media('<=#{$br2}') {
     height: 50vh;
     min-height: 500px;
@@ -44,7 +46,8 @@
 }
 
 .home-header__parallax-wrapper {
-  height: 0%;
+  height: 100%;
+  transform: translateX(100%) scale(1.2);
 }
 
 .home-header__img {
@@ -60,20 +63,20 @@
 }
 
 .home-header__descriptor {
-  transform: translateY(200px);
+  transform: translateY(150px);
   display: block;
   opacity: 0;
 }
 
 .home-header__h1 {
   margin-top: 12px;
-  transform: translateY(200px);
+  transform: translateY(150px);
   opacity: 0;
 }
 
 .home-header__btn {
   margin-top: size(52, 32);
-  transform: translateY(200px);
+  transform: translateY(150px);
   opacity: 0;
 }
 
