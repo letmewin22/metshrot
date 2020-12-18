@@ -8,7 +8,7 @@
     "webpack": "webpack",
     "start": "gulp",
     "precommit": "lint-staged",
-    "ghpages": "git add build && git commit -m 'build commit' && git subtree push --prefix build origin gh-pages",
+    "ghpages": "git add build && git commit -m \"build commit\" && git subtree push --prefix build origin gh-pages",
     "lint": "eslint --ignore-pattern 'src/js/libs/' --cache --format=node_modules/eslint-formatter-pretty src/js/",
     "lint-fix": "npm run lint -- --fix"
   },
@@ -62,7 +62,6 @@
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^3.0.0",
     "gulp-webp": "^4.0.1",
-    "gulp-webp-html": "^1.0.2",
     "require-dir": "^1.2.0",
     "ts-loader": "^8.0.11",
     "typescript": "^4.1.2",
