@@ -1,5 +1,5 @@
 import {raf, resize} from '@emotionagency/utils'
-import {state} from '@/components/SmoothScroll/state'
+import {state} from '@emotionagency/smoothscroll'
 
 export class Parallax {
   $els = document.querySelectorAll('[data-parallax]') as NodeListOf<HTMLElement>

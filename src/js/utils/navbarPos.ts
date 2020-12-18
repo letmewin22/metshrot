@@ -1,6 +1,6 @@
 import {state} from '../state'
 import {isFixed} from './isFixed'
-import {raf} from './RAF'
+import {raf} from '@emotionagency/utils'
 
 export default class NavbarPos {
   mouseFunc: (e: any) => any

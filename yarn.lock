@@ -887,10 +887,18 @@
   resolved "https://registry.yarnpkg.com/@emotionagency/form/-/form-0.1.5.tgz#f9c1307d7eee6a3aeee24c45db3f6c4f01314676"
   integrity sha512-FDrmX1BVUKFTt/R1ZpK7znsqqGWj64VDLe4NYTrELlvJPp/YlSHAllzxTxluf1zT0ESa6Xj4OIaFHQXn06XapQ==
 
-"@emotionagency/utils@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@emotionagency/utils/-/utils-0.0.3.tgz#027e2252b7d699598a0ff4c41c89090456dff182"
-  integrity sha512-CmXuNgpeNEdxW1tVz0O+TsOgrqRdS9wjgiuRffwDXkS3LZaVSmRepGDGr78kIF0y9D6UFQZVYeQwYbkhktnqcw==
+"@emotionagency/smoothscroll@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@emotionagency/smoothscroll/-/smoothscroll-0.0.4.tgz#b77e1d580a33b0a54c5184e947b1ed9d8f7872e4"
+  integrity sha512-HpUYNDOe9EU09+Chjq5AMzICIjDRRAbThEz08/4pmnybN8iQid03jPoFrktTeGjGstUgQgwYTRPSP0hGjZk4vA==
+  dependencies:
+    "@emotionagency/utils" "^0.0.4"
+    virtual-scroll "^1.5.2"
+
+"@emotionagency/utils@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@emotionagency/utils/-/utils-0.0.4.tgz#bafc3782bff64925dbb2fbd617420c2883389e41"
+  integrity sha512-VGIU1XsXZIDMAaEY6+qmJ/cFadYlK7x4J7I/RtTML7kS+0nt3GDtHi5xgMfO3oN1we3nkh9DHN9jIoNndbbwCQ==
   dependencies:
     debounce "^1.2.0"
 
@@ -3167,7 +3175,7 @@ css-what@^3.2.1:
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-3.4.2.tgz#ea7026fcb01777edbde52124e21f327e7ae950e4"
   integrity sha512-ACUm3L0/jiZTqfzRM3Hi9Q8eZqd6IK37mMWPLz9PJxkLWllYeRf+EHUSHYEtFop2Eqytaq1FizFVh7XfBnXCDQ==
 
-css@^2.0.0, css@^2.2.1:
+css@^2.0.0:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/css/-/css-2.2.4.tgz#c646755c73971f2bba6a601e2cf2fd71b1298929"
   integrity sha512-oUnjmWpy0niI3x/mPL8dVEI1l7MnG3+HHyRPHf+YFSbK+svOhXpmSOcDURUh2aOCgl2grzrOPt1nHLuCVFULLw==
@@ -5433,7 +5441,7 @@ gulp-ttf2woff@^1.1.1:
     readable-stream "^2.0.1"
     ttf2woff "^2.0.1"
 
-gulp-util@>=2.2.0, gulp-util@^3.0.6, gulp-util@^3.0.7:
+gulp-util@>=2.2.0, gulp-util@^3.0.6:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   integrity sha1-AFTh50RQLifATBh8PsxQXdVLu08=
@@ -5456,23 +5464,6 @@ gulp-util@>=2.2.0, gulp-util@^3.0.6, gulp-util@^3.0.7:
     replace-ext "0.0.1"
     through2 "^2.0.0"
     vinyl "^0.5.0"
-
-gulp-webp-css@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/gulp-webp-css/-/gulp-webp-css-1.1.0.tgz#90e42a7d5d7cf85b12ac66bf5db5a61f51406444"
-  integrity sha1-kOQqfV18+FsSrGa/XbWmH1FAZEQ=
-  dependencies:
-    css "^2.2.1"
-    gulp-util "^3.0.7"
-    through2 "^2.0.1"
-
-gulp-webp-html@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/gulp-webp-html/-/gulp-webp-html-1.0.2.tgz#091032d9b04fce1d56880d7ba5e08e7ae85c57ec"
-  integrity sha1-CRAy2bBPzh1WiA17peCOeuhcV+w=
-  dependencies:
-    gulp-util "^3.0.7"
-    through2 "^2.0.1"
 
 gulp-webp@^4.0.1:
   version "4.0.1"

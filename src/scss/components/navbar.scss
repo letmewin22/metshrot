@@ -142,7 +142,7 @@
 
 .navbar__mobile-nav {
   @include media('<=#{$br2}') {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: var(--vh);
     background-color: var(--black);

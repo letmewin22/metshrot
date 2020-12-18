@@ -6,9 +6,8 @@ import moveEl from '@/libs/moveEl'
 import Hooks from '@core/Hooks'
 import {state} from '@/state'
 
-import {TSmoothScroll} from '@/components/SmoothScroll/SmoothScroll'
 import bgWebP from '@/utils/bgWebP'
-import {resize} from '@/utils/Resize'
+import {resize} from '@emotionagency/utils'
 import {winH} from '@/utils/winH'
 import NavbarPos from '@/utils/navbarPos'
 import Dropdown from '@/components/Dropdown'
@@ -29,7 +28,7 @@ export const render = <T>(H: T): void => {
     state.isLoaded = true
   })
 
-  let smoothScroll: TSmoothScroll
+  let smoothScroll
 
   hooks.useBothStart(() => {
     bgWebP()
@@ -52,8 +51,6 @@ export const render = <T>(H: T): void => {
     dropdown.init()
 
     new Nav()
-    new Parallax()
-
     const sections = [
       ...document.querySelectorAll('header'),
       ...document.querySelectorAll('.section'),
@@ -65,9 +62,11 @@ export const render = <T>(H: T): void => {
 
     const {SmoothScroll} = await import(
       /* webpackChunkName: "smooth-scroll" */
-      '@/components/SmoothScroll/SmoothScroll'
+      '@emotionagency/smoothscroll'
     )
     smoothScroll = new SmoothScroll()
+
+    new Parallax()
   })
 
   const links = document.querySelectorAll('nav a')
