@@ -1,4 +1,5 @@
 import Highway from '@dogstudio/highway'
+import gsap from 'gsap'
 
 type T = {
   from?: HTMLElement
@@ -8,15 +9,33 @@ type T = {
 }
 
 class Basic extends Highway.Transition {
-  in({from, done}:T): void {
-    window.scrollTo(0, 0)
-    // Remove Old View
+  in({to, from, done}: T): void {
+    gsap.set(to, {
+      opacity: 0
+    })
+
     from.remove()
-    done()
+
+    gsap.to(to, {
+      duration: 0.3,
+      opacity: 1,
+      ease: 'power2.out',
+      onComplete: () => {
+        document.body.classList.remove('e-fixed')
+        done()
+      }
+    })
   }
 
-  out({done}:T): void {
-    done()
+  out({done, from}: T): void {
+    document.body.classList.add('e-fixed')
+    gsap.to(from, {
+      duration: 0.3,
+      opacity: 0,
+      scale: 1.05,
+      ease: 'power2.out',
+      onComplete: done
+    })
   }
 }
 

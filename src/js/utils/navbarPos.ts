@@ -1,6 +1,6 @@
-import {state} from '../state'
-import {isFixed} from './isFixed'
+import {state} from '@emotionagency/smoothscroll'
 import {raf} from '@emotionagency/utils'
+import {isFixed} from './isFixed'
 
 export default class NavbarPos {
   mouseFunc: (e: any) => any
@@ -24,7 +24,6 @@ export default class NavbarPos {
   }
 
   scrollNav(): void {
-    // const b = document.getElementById('scroller').getBoundingClientRect()
     const b = {
       top: -state.scrolled
     }

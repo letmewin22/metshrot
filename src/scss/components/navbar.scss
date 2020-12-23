@@ -1,9 +1,17 @@
+.nav-hidden {
+  .navbar {
+    opacity: 0 !important;
+    transform: translateY(-60px);
+  }
+}
+
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   width: 100%;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .navbar__container {
@@ -33,8 +41,8 @@
   @include media('<=#{$br2}') {
     padding-left: size(60, 20);
     padding-right: size(60, 20);
-    padding-bottom: 100px;
-    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-top: 120px;
     flex-direction: column;
     align-items: start;
     height: 100%;
@@ -144,6 +152,8 @@
   @include media('<=#{$br2}') {
     position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
     height: var(--vh);
     background-color: var(--black);
     color: white;
