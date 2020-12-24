@@ -1,7 +1,6 @@
 .production {
   border-radius: 5px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   @include media('<=638px') {
     flex-direction: column;
@@ -9,47 +8,13 @@
 }
 
 .production__item {
-  flex: 0 0 50%;
   position: relative;
   height: size(528, 290);
   background-color: white;
-  width: 50%;
   display: flex;
   padding: size(44, 20) size(52, 20);
   flex-direction: column;
   justify-content: space-between;
-  &:nth-child(odd) {
-    &::after {
-      content: '';
-      position: absolute;
-      display: block;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 1px;
-      height: 80%;
-      background-color: var(--g);
-    }
-  }
-  &:last-child {
-    &::after {
-      display: none;
-    }
-  }
-  @include media('<=638px') {
-    width: 100%;
-    &:nth-child(odd) {
-      &::after {
-        height: 1px;
-        width: 90%;
-        transform: translateX(-50%);
-        left: 50%;
-        top: auto;
-        right: auto;
-        bottom: 0;
-      }
-    }
-  }
 }
 
 .production__img {

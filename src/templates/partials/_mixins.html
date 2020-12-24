@@ -1,5 +1,5 @@
-{% macro btn(text, selector) %}
-  <button class="btn {{selector}}">
+{% macro btn(text, selector, data) %}
+  <button {{data|safe}} class="btn {{selector}}">
     <span class="btn__text">{{text}}</span>
     <span class="btn__overlay"></span>
   </button>

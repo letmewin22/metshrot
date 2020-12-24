@@ -12,9 +12,9 @@ body {
   background-color: var(--lg);
   line-height: 1.5em;
   font-size: $def-size;
+  height: 100vh;
   height: var(--vh);
   overflow: hidden;
-  opacity: 0;
 }
 
 .e-fixed {
@@ -32,6 +32,7 @@ body {
 #scroll-container {
   overflow-y: auto;
   overflow-x: hidden;
+  height: 100vh;
   height: var(--vh);
 }
 
@@ -80,4 +81,9 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
+}
+
+[data-i] {
+  transform: translateY(150px);
+  opacity: 0;
 }

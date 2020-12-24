@@ -1,33 +1,19 @@
 import Highway from '@dogstudio/highway'
-import gsap from 'gsap'
+import {PageLoader} from '@/components/loaders/PageLoader'
+import {onLoaded} from '@/utils/onLoaded'
+import {Parallax} from '@/components/Parallax'
 
 class Home extends Highway.Renderer {
+  p: typeof Parallax.prototype
+
   onEnterCompleted(): void {
-    const img = document.querySelector('.parallax-wrapper')
-    const imgWrapper = document.querySelector('.home-header__container-left')
-    const h1 = document.querySelector('.home-header__h1')
-    const descriptor = document.querySelector('.home-header__descriptor')
-    const btn = document.querySelector('.home-header__btn')
-
-    document.body.style.opacity = '1'
-
-    setTimeout(() => {
-      const tl = gsap.timeline({
-        onComplete: () => {
-          document.body.classList.remove('e-fixed')
-        }
-      })
-
-      tl.to(img, {duration: 1.2, x: '0%', scale: 1, ease: 'power2.inOut'})
-      tl.to(imgWrapper, {duration: 1.2, x: '0%', ease: 'power2.inOut'}, 0)
-      tl.to(
-        descriptor,
-        {duration: 1, y: 0, opacity: 1, ease: 'power2.out'},
-        0.4
-      )
-      tl.to(h1, {duration: 1, y: 0, opacity: 1, ease: 'power2.out'}, 0.6)
-      tl.to(btn, {duration: 1, y: 0, opacity: 1, ease: 'power2.out'}, 0.8)
-    }, 500)
+    onLoaded(() => {
+      PageLoader.load()
+      this.p = new Parallax()
+    })
+  }
+  onLeaveCompleted(): void {
+    this.p.destroy()
   }
 }
 // Don`t forget to export your renderer

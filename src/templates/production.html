@@ -2,9 +2,47 @@
 {% set route = "production" %}
 {% extends "layouts/_layout.html" %}
 
-
 {% block content %}
 
-  <h1 class="h1">Production</h1>
-
+  <header class="production-header">
+    <div class="container production-header__container">
+      <div class="production-header__content">
+        <span data-i class="descriptor production-header__descriptor">Без ГМО, антибіотиків та глютену</span>
+        <h1 data-i class="h1 production-header__h1">Заморожена птиця</h1>
+        <p data-i class="production-header__text">Відбірне, заморожене м’ясо птиці: куряче м’ясо та фарш, курчата-халяль, качка та гусак.</p>
+      </div>
+      <div data-i class="production production-header__production">
+        <div class="production__item production-header__production-item">
+          <div class="production__item-top">
+            <div class="img-wrapper production__img-wrapper">
+              <img class="production__img" src='./img/production/1.png' alt="">
+            </div>
+          </div>
+          <div class="production__item-bottom">
+            <h3 class="h3 production__name">
+              <span>
+                <a href="#">Курча ціле</a></span></h3>
+            {{mixins.circleLink('production__link', '#')}}
+          </div>
+        </div>
+        <div class="production__item production-header__production-item">
+          <div class="production__item-top">
+            <div class="img-wrapper production__img-wrapper">
+              <img class="production__img" src='./img/production/1.png' alt="">
+            </div>
+          </div>
+          <div class="production__item-bottom">
+            <h3 class="h3 production__name">
+              <span>
+                <a href="#">Курча халяль</a></span></h3>
+            {{mixins.circleLink('production__link', '#')}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    {% include "partials/_cta.html" %}
+  </main>
+  {% include "partials/_footer.html" %}
 {% endblock %}

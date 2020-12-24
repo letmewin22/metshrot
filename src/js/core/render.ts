@@ -12,8 +12,8 @@ import {winH} from '@/utils/winH'
 import NavbarPos from '@/utils/navbarPos'
 import Dropdown from '@/components/Dropdown'
 import {Nav} from '@/components/Nav'
-import {Parallax} from '@/components/Parallax'
 import {intersectionOvserver} from '@/utils/intersectionOvserver'
+import {Loader} from '@/components/loaders/Loader'
 
 export const render = <T>(H: T): void => {
   process.env.NODE_ENV === 'production' && cssWebP()
@@ -34,39 +34,40 @@ export const render = <T>(H: T): void => {
     bgWebP()
     moveEl()
 
-    smoothScroll && smoothScroll.reset()
-  })
-
-  hooks.useLoad(async() => {
-    resize.on(winH)
-
-    const navbarPos = new NavbarPos()
-    navbarPos.init()
-
-    const dropdown = new Dropdown({
-      btn: '.dropdown__btn',
-      items: '.dropdown__content',
-      parent: '.dropdown'
-    })
-    dropdown.init()
-
-    new Nav()
     const sections = [
       ...document.querySelectorAll('header'),
       ...document.querySelectorAll('.section'),
       ...document.querySelectorAll('footer')
     ] as HTMLElement[]
+
     sections.forEach(section => {
       intersectionOvserver(section).on()
     })
 
-    const {SmoothScroll} = await import(
-      /* webpackChunkName: "smooth-scroll" */
-      '@emotionagency/smoothscroll'
-    )
-    smoothScroll = new SmoothScroll()
+    smoothScroll && smoothScroll.reset()
+  })
 
-    new Parallax()
+  hooks.useLoad(() => {
+    resize.on(winH)
+    new Loader(async() => {
+      const navbarPos = new NavbarPos()
+      navbarPos.init()
+
+      const dropdown = new Dropdown({
+        btn: '.dropdown__btn',
+        items: '.dropdown__content',
+        parent: '.dropdown'
+      })
+      dropdown.init()
+
+      new Nav()
+
+      const {SmoothScroll} = await import(
+        /* webpackChunkName: "smooth-scroll" */
+        '@emotionagency/smoothscroll'
+      )
+      smoothScroll = new SmoothScroll()
+    })
   })
 
   const links = document.querySelectorAll('nav a')

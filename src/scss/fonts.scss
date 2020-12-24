@@ -21,6 +21,7 @@
 
 .descriptor {
   text-transform: uppercase;
+  display: inline-block;
   font-size: size(16, 14);
   @include medium;
 }

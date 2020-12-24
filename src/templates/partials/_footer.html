@@ -1,0 +1,39 @@
+  <footer class="footer">
+    <div class="container footer__container full-container full-container--no-right-margin">
+      <div class="full-container__right footer__container-right">
+        <div class="footer__content">
+          <h2 class="h2">Контакти для&nbsp;зв’язку</h2>
+          <div class="footer__adress">Ми знаходимося у Києві вул. О.Теліги 4, офіс 225</div>
+          <ul class="footer__contacts">
+            <li class="footer__contacts-item">
+              <h4 class="h4 footer__h4">Телефонуйте:</h4>
+              <a class="footer__contact footer__contact--stroke" href="tel:+380671113542">+38 (067) 111 35 42</a>
+              <a class="footer__contact footer__contact--stroke" href="tel:+380502552772">+38 (050) 255 27 72</a>
+            </li>
+            <li class="footer__contacts-item">
+              <h4 class="h4 footer__h4">Пишіть на email:</h4>
+              <a class="footer__contact footer__contact--stroke" href="mailto:metshrot@i.ua">metshrot@i.ua</a>
+              <a class="footer__contact footer__contact--stroke" href="mailto:metshrot@gmail.com">metshrot@gmail.com</a>
+            </li>
+            <li class="footer__contacts-item">
+              <h4 class="h4 footer__h4">Слідкуйте у соцмережах:</h4>
+              {{mixins.circleLink('footer__contact footer__contact--social', '#', type = 'insta')}}
+              {{mixins.circleLink('footer__contact footer__contact--social', '#', type = 'fb')}}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="full-container__left footer-container__left">
+        <img src="./img/map.png" alt="">
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer__bottom">
+        <div class="footer__bottom-line"></div>
+        <div class="footer__bottom-content">
+          <span class="footer__copyright">© 2020 ТОВ «Метшрот». Усі права захищено</span>
+          {% include "partials/_made-by.html" %}
+        </div>
+      </div>
+    </div>
+  </footer>

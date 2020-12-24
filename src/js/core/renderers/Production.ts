@@ -1,11 +1,12 @@
 import Highway from '@dogstudio/highway'
+import {PageLoader} from '@/components/loaders/PageLoader'
+import {onLoaded} from '@/utils/onLoaded'
 
 export default class Production extends Highway.Renderer {
-
   onEnterCompleted(): void {
-    console.log('Hello from Production')
+    onLoaded(() => {
+      PageLoader.load()
+    })
   }
-  onLeave(): void {
-    console.log('Leave from Production')
-  }
+  onLeaveCompleted(): void {}
 }

@@ -32,7 +32,7 @@ class Basic extends Highway.Transition {
     gsap.to(from, {
       duration: 0.3,
       opacity: 0,
-      scale: 1.05,
+      y: -60,
       ease: 'power2.out',
       onComplete: done
     })
