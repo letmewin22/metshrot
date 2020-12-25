@@ -1,6 +1,6 @@
 import Highway from '@dogstudio/highway'
 
-import {home, about, production} from '@/core/renderers'
+import {home, about, production, product} from '@/core/renderers'
 import {Basic} from '@/core/transitions'
 import {render} from '@/core/render'
 
@@ -10,7 +10,8 @@ const H: typeof Highway = new Highway.Core({
   renderers: {
     home,
     about,
-    production
+    production,
+    product
   },
   transitions: {
     default: Basic

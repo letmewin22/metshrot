@@ -2,13 +2,13 @@
 <html lang="uk" class="custom">
   <head>
     <meta charset="utf-8">
-    <title>production</title>
+    <title>product</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#131116">
     <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
     <meta name="description" content="Template">
-    <meta property="og:title" content="production">
+    <meta property="og:title" content="product">
     <meta property="og:description" content="Template">
     <link rel="preload" href="./fonts/PTRootUI_Medium.woff2" type="font/woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/PTRootUI_Regular.woff2" type="font/woff" as="font" crossorigin="anonymous">
@@ -63,57 +63,91 @@
       <div class="navbar__mobile-nav"></div>
     </div>
     <div id="scroll-container" class="site-wrapper" data-router-wrapper>
-      <div data-router-view="production">
-        <header class="production-header">
-          <div class="container production-header__container">
-            <div class="production-header__content">
-              <span data-i class="descriptor production-header__descriptor">Без ГМО, антибіотиків та глютену</span>
-              <h1 data-i class="h1 production-header__h1">Заморожена птиця</h1>
-              <p data-i class="production-header__text">Відбірне, заморожене м’ясо птиці: куряче м’ясо та фарш, курчата-халяль, качка та гусак.</p>
+      <div data-router-view="product">
+        <header class="product-header">
+          <div class="container full-container product-header__container">
+            <div class="full-container__left product-header__container-left">
+              <div class="product-header__slider">
+                <div class="product-header__slides">
+                  <div data-slide class="product-header__slide">
+                    <div data-slide-img class="product-header__slide-img" style="background-image:url('./img/production/slider/1.jpg')"></div>
+                  </div>
+                  <div data-slide class="product-header__slide">
+                    <div data-slide-img class="product-header__slide-img" style="background-image:url('./img/production/slider/2.jpg')"></div>
+                  </div>
+                </div>
+              </div>
+              <nav class="product-header__slider-nav">
+                <div data-nav="prev" class="circle-link product-header__slider-nav-item product-header__slider-nav-item--prev">
+                  <span class="circle-link__circle"></span>
+                  <svg class="product-header__slider-icon" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L15.707 6.29279C15.8945 6.48031 15.9998 6.73462 15.9998 6.99979C15.9998 7.26495 15.8945 7.51926 15.707 7.70679L9.707 13.7068C9.5184 13.8889 9.2658 13.9897 9.0036 13.9875C8.7414 13.9852 8.49059 13.88 8.30518 13.6946C8.11977 13.5092 8.0146 13.2584 8.01233 12.9962C8.01005 12.734 8.11084 12.4814 8.293 12.2928L12.586 7.99979H1C0.734784 7.99979 0.48043 7.89443 0.292893 7.70689C0.105357 7.51936 0 7.265 0 6.99979C0 6.73457 0.105357 6.48022 0.292893 6.29268C0.48043 6.10514 0.734784 5.99979 1 5.99979H12.586L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#130F10" />
+                  </svg>
+                </div>
+                <div data-nav="next" class=" circle-link product-header__slider-nav-item product-header__slider-nav-item--next">
+                  <span class="circle-link__circle"></span>
+                  <svg class="product-header__slider-icon" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L15.707 6.29279C15.8945 6.48031 15.9998 6.73462 15.9998 6.99979C15.9998 7.26495 15.8945 7.51926 15.707 7.70679L9.707 13.7068C9.5184 13.8889 9.2658 13.9897 9.0036 13.9875C8.7414 13.9852 8.49059 13.88 8.30518 13.6946C8.11977 13.5092 8.0146 13.2584 8.01233 12.9962C8.01005 12.734 8.11084 12.4814 8.293 12.2928L12.586 7.99979H1C0.734784 7.99979 0.48043 7.89443 0.292893 7.70689C0.105357 7.51936 0 7.265 0 6.99979C0 6.73457 0.105357 6.48022 0.292893 6.29268C0.48043 6.10514 0.734784 5.99979 1 5.99979H12.586L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#130F10" />
+                  </svg>
+                </div>
+              </nav>
             </div>
-            <div data-i class="production production-header__production">
-              <div class="production__item production-header__production-item">
-                <div class="production__item-top">
-                  <div class="img-wrapper production__img-wrapper">
-                    <img class="production__img" src='./img/production/1.png' alt="">
-                  </div>
-                </div>
-                <div class="production__item-bottom">
-                  <h3 class="h3 production__name">
-                    <span>
-                      <a href="./product">Курча ціле</a></span>
-                  </h3>
-                  <a class="circle-link production__link" href="./product">
-                    <span class="circle-link__circle"></span>
-                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L15.707 6.29279C15.8945 6.48031 15.9998 6.73462 15.9998 6.99979C15.9998 7.26495 15.8945 7.51926 15.707 7.70679L9.707 13.7068C9.5184 13.8889 9.2658 13.9897 9.0036 13.9875C8.7414 13.9852 8.49059 13.88 8.30518 13.6946C8.11977 13.5092 8.0146 13.2584 8.01233 12.9962C8.01005 12.734 8.11084 12.4814 8.293 12.2928L12.586 7.99979H1C0.734784 7.99979 0.48043 7.89443 0.292893 7.70689C0.105357 7.51936 0 7.265 0 6.99979C0 6.73457 0.105357 6.48022 0.292893 6.29268C0.48043 6.10514 0.734784 5.99979 1 5.99979H12.586L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#130F10" />
-                    </svg>
-                  </a>
-                </div>
+            <div class="full-container__right product-header__container-right">
+              <h1 data-i class="h1">Качка ціла, заморожена</h1>
+              <div data-i class="product-header__description">
+                <p>Тушка качки, сухого замороження, без шиї та потроху. М’ясо качки — відмінної якості, без ін’єкцій.</p>
               </div>
-              <div class="production__item production-header__production-item">
-                <div class="production__item-top">
-                  <div class="img-wrapper production__img-wrapper">
-                    <img class="production__img" src='./img/production/1.png' alt="">
-                  </div>
-                </div>
-                <div class="production__item-bottom">
-                  <h3 class="h3 production__name">
-                    <span>
-                      <a href="#">Курча халяль</a></span>
-                  </h3>
-                  <a class="circle-link production__link" href="#">
-                    <span class="circle-link__circle"></span>
-                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L15.707 6.29279C15.8945 6.48031 15.9998 6.73462 15.9998 6.99979C15.9998 7.26495 15.8945 7.51926 15.707 7.70679L9.707 13.7068C9.5184 13.8889 9.2658 13.9897 9.0036 13.9875C8.7414 13.9852 8.49059 13.88 8.30518 13.6946C8.11977 13.5092 8.0146 13.2584 8.01233 12.9962C8.01005 12.734 8.11084 12.4814 8.293 12.2928L12.586 7.99979H1C0.734784 7.99979 0.48043 7.89443 0.292893 7.70689C0.105357 7.51936 0 7.265 0 6.99979C0 6.73457 0.105357 6.48022 0.292893 6.29268C0.48043 6.10514 0.734784 5.99979 1 5.99979H12.586L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#130F10" />
-                    </svg>
-                  </a>
-                </div>
+              <div data-i class="product-header__package">
+                <span class="h4 product-header__h4">Пакування:</span>
+                <span class="product-header__text">індивідуальне (поліетиленовий пакет).</span>
               </div>
+              <div data-i class="product-header__weight">
+                <span class="h4 product-header__h4">Вага:</span>
+                <span class="product-header__text">різного калібру, від 2,0 кг до 2,6 кг: 2,0 кг/2,1 кг/2,2 кг/2,3 кг/2,4 кг/2,5 кг/2,6 кг.</span>
+              </div>
+              <div data-i class="product-header__price">Вартість за 1 шт. — <span>від 250 грн</span></div>
+              <button data-i class="btn product-header__btn">
+                <span class="btn__text">Замовити</span>
+                <span class="btn__overlay"></span>
+              </button>
             </div>
           </div>
         </header>
         <main>
+          <section class='section product-description'>
+            <div class='container section__container product-description__container flex'>
+              <div class="container__left">
+                <h2 class="h2">Опис</h2>
+              </div>
+              <div class="container__right product-description__container-right">
+                <div class="product-description__card">
+                  <p>Оленина цінується за благородство та неповторність. Смак і аромат цього м'яса багатший, ніж у сільськогосподарських тварин. Дикий звір харчується тим, що є в природі. У їх раціон входять різноманітні рослини і трави, що позитивно позначається не тільки на смаку, але й на якості м'яса, а значить, на здоров'я майбутніх споживачів. М'ясо оленя багате на вітаміни і мікроелементами.</p>
+                </div>
+                <div class="product-description__card">
+                  <p>Це джерело легкозасвоюваного заліза та повноцінного білка, фосфору, кальцію, магнію, а також вітамінів групи B (B2, B5, B6).</p>
+                  <p>Оленина також грає важливу роль в профілактиці і лікуванні раку через присутнього в ній селену, який відомий своїми антиканцерогенними властивостями.</p>
+                </div>
+                <div class="product-description__card">
+                  <p>М'ясо оленя відрізняється низьким вмістом холестерину та великою кількістю незамінних амінокислот, які людський організм не може виробляти самостійно. Всі дикі тварини, на відміну від сільськогосподарських, характеризуються нижчим рівнем жирової тканини, тому їх м'ясо одне з найменш калорійних. Середня енергетична цінність — близько 120 ккал. на 100 г. продукту. </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class='section product-features'>
+            <div class='container section__container'>
+              <h2 class="h2">Особливості</h2>
+              <div class="product-features__cards">
+                <div class="product-features__card">
+                  <h3 class="h3">Температура зберігання</h3>
+                  <p class="h4 product-features__card-text">від -6 °C до -18 °C</p>
+                </div>
+                <div class="product-features__card">
+                  <h3 class="h3">Термін зберігання</h3>
+                  <p class="h4 product-features__card-text">від 48 годин до 2-х років (залежно від температури зберігання)</p>
+                </div>
+              </div>
+            </div>
+          </section>
           <section class='section cta'>
             <div class='container section__container full-container last'>
               <div class="full-container__left">

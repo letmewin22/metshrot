@@ -1,0 +1,137 @@
+.product-header {
+  min-height: var(--vh);
+}
+
+.product-header__container {
+  padding-top: size(160, 96);
+}
+
+.product-header__container-right {
+  margin-left: 0px;
+}
+
+.product-header__description {
+  margin-top: 36px;
+}
+
+.product-header__package,
+.product-header__weight,
+.product-header__price,
+.product-header__btn {
+  margin-top: 36px;
+}
+
+.product-header__price {
+  font-size: size(40, 24);
+  span {
+    color: var(--accent);
+  }
+}
+
+.product-header__container-left {
+  padding-right: vw(168);
+}
+
+.product-header__slider {
+  width: 100%;
+}
+
+.product-header__slides {
+  width: 100%;
+  position: relative;
+  padding-bottom: toimg(820, 680);
+  overflow: hidden;
+}
+
+.product-header__slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  overflow: hidden;
+  &.active {
+    opacity: 1;
+  }
+}
+
+.product-header__slide-img {
+  width: 100%;
+  height: 100%;
+  @include cover;
+  padding-bottom: 50%;
+}
+
+.product-header__slider-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  float: right;
+  width: size(166, 110);
+  margin-top: size(28, 12);
+  @include media('<=#{$br4}') {
+    width: calc(100% - 40px);
+  }
+}
+
+.product-header__slider-nav-item {
+  cursor: pointer;
+  .circle-link__circle {
+    background-color: white;
+  }
+}
+
+.product-header__slider-icon {
+  display: block;
+  max-width: 100%;
+  @include media('<=#{$br4}') {
+    width: 50%;
+  }
+}
+
+.product-header__slider-nav-item--prev {
+  &:hover {
+    .product-header__slider-icon {
+      transform: rotate(180deg) scale(0.9);
+    }
+  }
+  .product-header__slider-icon {
+    transform: rotate(180deg);
+  }
+}
+
+.product-description__card {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 40px 52px;
+  + .product-description__card {
+    margin-top: size(32, 20);
+  }
+  p + p {
+    margin-top: 1.5em;
+  }
+}
+
+.product-features {
+}
+
+.product-features__cards {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: size(52, 28);
+}
+.product-features__card {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 32px;
+  margin-top: $v-margin;
+}
+
+.product-features__card-text {
+  margin-top: size(28, 20);
+  color: var(--accent);
+}

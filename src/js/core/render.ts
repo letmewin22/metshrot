@@ -50,9 +50,6 @@ export const render = <T>(H: T): void => {
   hooks.useLoad(() => {
     resize.on(winH)
     new Loader(async() => {
-      const navbarPos = new NavbarPos()
-      navbarPos.init()
-
       const dropdown = new Dropdown({
         btn: '.dropdown__btn',
         items: '.dropdown__content',
@@ -67,6 +64,9 @@ export const render = <T>(H: T): void => {
         '@emotionagency/smoothscroll'
       )
       smoothScroll = new SmoothScroll()
+
+      const navbarPos = new NavbarPos()
+      navbarPos.init()
     })
   })
 

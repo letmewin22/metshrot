@@ -887,10 +887,10 @@
   resolved "https://registry.yarnpkg.com/@emotionagency/form/-/form-0.1.5.tgz#f9c1307d7eee6a3aeee24c45db3f6c4f01314676"
   integrity sha512-FDrmX1BVUKFTt/R1ZpK7znsqqGWj64VDLe4NYTrELlvJPp/YlSHAllzxTxluf1zT0ESa6Xj4OIaFHQXn06XapQ==
 
-"@emotionagency/smoothscroll@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@emotionagency/smoothscroll/-/smoothscroll-0.0.5.tgz#3c05e471644d209d1cebb0548cafffdfcd3341c4"
-  integrity sha512-Y7jwo0XzJyoBCLpWtEu+vhwnjcGzQJ/RLE/ALW3n1cmZsDa+Jl6TVlGrX6SCpkQSJsYaAYZjznsrudALbTfPGQ==
+"@emotionagency/smoothscroll@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@emotionagency/smoothscroll/-/smoothscroll-0.0.6.tgz#e7e85872a6bd7ff596e7d3de7a951123bcb6cf7f"
+  integrity sha512-J3huA7eCsYR0o4sBMFigP4cU+o7m/Drf+xqXMD3Ee3xhMP9UyDCy777ZgRzclS9P8tNQY5j6SzVuzK+hXRjsmg==
   dependencies:
     "@emotionagency/utils" "0.0.6"
     virtual-scroll "^1.5.2"

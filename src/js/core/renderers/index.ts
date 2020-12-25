@@ -9,3 +9,7 @@ export const about = (): Promise<any> => {
 export const production = (): Promise<any> => {
   return import(/* webpackChunkName: "production" */ './Production')
 }
+
+export const product = (): Promise<any> => {
+  return import(/* webpackChunkName: "product" */ './Product')
+}
