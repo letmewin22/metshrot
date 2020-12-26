@@ -15,7 +15,7 @@ export class PageLoader {
 
     img &&
       tl.to(img, {
-        duration: 1.2,
+        duration: 1,
         x: '0%',
         scale: 1,
         ease: 'power2.inOut'
@@ -25,7 +25,7 @@ export class PageLoader {
       tl.to(
         imgWrapper,
         {
-          duration: 1.2,
+          duration: 1,
           x: '0%',
           ease: 'power2.inOut'
         },
@@ -36,7 +36,7 @@ export class PageLoader {
       tl.to(
         items,
         {
-          duration: 1,
+          duration: 0.7,
           y: 0,
           opacity: 1,
           ease: 'power2.out',

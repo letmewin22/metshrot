@@ -87,3 +87,12 @@ body {
   transform: translateY(150px);
   opacity: 0;
 }
+
+[data-img='-1'] {
+  transform: translateX(-100%);
+  overflow: hidden;
+}
+
+[data-img='1'] {
+  transform: translateX(100%);
+}

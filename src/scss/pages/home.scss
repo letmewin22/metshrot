@@ -24,8 +24,6 @@
 }
 
 .home-header__container-left {
-  transform: translateX(-100%);
-  overflow: hidden;
   @include media('<=#{$br2}') {
     height: 50vh;
     min-height: 500px;

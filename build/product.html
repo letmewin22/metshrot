@@ -40,7 +40,7 @@
                 </svg></div>
               <div class="dropdown__content">
                 <div class="dropdown__links">
-                  <a class="dropdown__link" href="#">Птиця</a>
+                  <a class="dropdown__link" href="./production">Птиця</a>
                   <a class="dropdown__link" href="#">Дичина</a>
                 </div>
               </div>
@@ -67,49 +67,54 @@
         <header class="product-header">
           <div class="container full-container product-header__container">
             <div class="full-container__left product-header__container-left">
-              <div class="product-header__slider">
-                <div class="product-header__slides">
-                  <div data-slide class="product-header__slide">
-                    <div data-slide-img class="product-header__slide-img" style="background-image:url('./img/production/slider/1.jpg')"></div>
-                  </div>
-                  <div data-slide class="product-header__slide">
-                    <div data-slide-img class="product-header__slide-img" style="background-image:url('./img/production/slider/2.jpg')"></div>
+              <div class="product-header__mob-h1"></div>
+              <div class="product-header__slider-wrapper">
+                <div data-img="-1" class="product-header__slider">
+                  <div data-img="1" class="product-header__slides">
+                    <div data-slide class="product-header__slide">
+                      <div data-slide-img class="product-header__slide-img" style="background-image:url('./img/production/slider/1.jpg')"></div>
+                    </div>
+                    <div data-slide class="product-header__slide">
+                      <div data-slide-img class="product-header__slide-img" style="background-image:url('./img/production/slider/2.jpg')"></div>
+                    </div>
                   </div>
                 </div>
+                <nav data-i class="product-header__slider-nav">
+                  <div data-nav="prev" class="circle-link product-header__slider-nav-item product-header__slider-nav-item--prev">
+                    <span class="circle-link__circle"></span>
+                    <svg class="product-header__slider-icon" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L15.707 6.29279C15.8945 6.48031 15.9998 6.73462 15.9998 6.99979C15.9998 7.26495 15.8945 7.51926 15.707 7.70679L9.707 13.7068C9.5184 13.8889 9.2658 13.9897 9.0036 13.9875C8.7414 13.9852 8.49059 13.88 8.30518 13.6946C8.11977 13.5092 8.0146 13.2584 8.01233 12.9962C8.01005 12.734 8.11084 12.4814 8.293 12.2928L12.586 7.99979H1C0.734784 7.99979 0.48043 7.89443 0.292893 7.70689C0.105357 7.51936 0 7.265 0 6.99979C0 6.73457 0.105357 6.48022 0.292893 6.29268C0.48043 6.10514 0.734784 5.99979 1 5.99979H12.586L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#130F10" />
+                    </svg>
+                  </div>
+                  <div data-nav="next" class=" circle-link product-header__slider-nav-item product-header__slider-nav-item--next">
+                    <span class="circle-link__circle"></span>
+                    <svg class="product-header__slider-icon" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L15.707 6.29279C15.8945 6.48031 15.9998 6.73462 15.9998 6.99979C15.9998 7.26495 15.8945 7.51926 15.707 7.70679L9.707 13.7068C9.5184 13.8889 9.2658 13.9897 9.0036 13.9875C8.7414 13.9852 8.49059 13.88 8.30518 13.6946C8.11977 13.5092 8.0146 13.2584 8.01233 12.9962C8.01005 12.734 8.11084 12.4814 8.293 12.2928L12.586 7.99979H1C0.734784 7.99979 0.48043 7.89443 0.292893 7.70689C0.105357 7.51936 0 7.265 0 6.99979C0 6.73457 0.105357 6.48022 0.292893 6.29268C0.48043 6.10514 0.734784 5.99979 1 5.99979H12.586L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#130F10" />
+                    </svg>
+                  </div>
+                </nav>
               </div>
-              <nav class="product-header__slider-nav">
-                <div data-nav="prev" class="circle-link product-header__slider-nav-item product-header__slider-nav-item--prev">
-                  <span class="circle-link__circle"></span>
-                  <svg class="product-header__slider-icon" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L15.707 6.29279C15.8945 6.48031 15.9998 6.73462 15.9998 6.99979C15.9998 7.26495 15.8945 7.51926 15.707 7.70679L9.707 13.7068C9.5184 13.8889 9.2658 13.9897 9.0036 13.9875C8.7414 13.9852 8.49059 13.88 8.30518 13.6946C8.11977 13.5092 8.0146 13.2584 8.01233 12.9962C8.01005 12.734 8.11084 12.4814 8.293 12.2928L12.586 7.99979H1C0.734784 7.99979 0.48043 7.89443 0.292893 7.70689C0.105357 7.51936 0 7.265 0 6.99979C0 6.73457 0.105357 6.48022 0.292893 6.29268C0.48043 6.10514 0.734784 5.99979 1 5.99979H12.586L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#130F10" />
-                  </svg>
-                </div>
-                <div data-nav="next" class=" circle-link product-header__slider-nav-item product-header__slider-nav-item--next">
-                  <span class="circle-link__circle"></span>
-                  <svg class="product-header__slider-icon" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L15.707 6.29279C15.8945 6.48031 15.9998 6.73462 15.9998 6.99979C15.9998 7.26495 15.8945 7.51926 15.707 7.70679L9.707 13.7068C9.5184 13.8889 9.2658 13.9897 9.0036 13.9875C8.7414 13.9852 8.49059 13.88 8.30518 13.6946C8.11977 13.5092 8.0146 13.2584 8.01233 12.9962C8.01005 12.734 8.11084 12.4814 8.293 12.2928L12.586 7.99979H1C0.734784 7.99979 0.48043 7.89443 0.292893 7.70689C0.105357 7.51936 0 7.265 0 6.99979C0 6.73457 0.105357 6.48022 0.292893 6.29268C0.48043 6.10514 0.734784 5.99979 1 5.99979H12.586L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#130F10" />
-                  </svg>
-                </div>
-              </nav>
             </div>
             <div class="full-container__right product-header__container-right">
-              <h1 data-i class="h1">Качка ціла, заморожена</h1>
-              <div data-i class="product-header__description">
-                <p>Тушка качки, сухого замороження, без шиї та потроху. М’ясо качки — відмінної якості, без ін’єкцій.</p>
+              <h1 data-move="product-header__mob-h1,1,960" data-i class="h1 product-header__h1">Качка ціла, заморожена</h1>
+              <div data-i class="product-header__details">
+                <div class="product-header__description">
+                  <p>Тушка качки, сухого замороження, без шиї та потроху. М’ясо качки — відмінної якості, без ін’єкцій.</p>
+                </div>
+                <div class="product-header__package">
+                  <span class="h4 product-header__h4">Пакування:</span>
+                  <span class="product-header__text">індивідуальне (поліетиленовий пакет).</span>
+                </div>
+                <div class="product-header__weight">
+                  <span class="h4 product-header__h4">Вага:</span>
+                  <span class="product-header__text">різного калібру, від 2,0 кг до 2,6 кг: 2,0 кг/2,1 кг/2,2 кг/2,3 кг/2,4 кг/2,5 кг/2,6 кг.</span>
+                </div>
+                <div class="product-header__price">Вартість за 1 шт. — <span>від 250 грн</span></div>
+                <button class="btn product-header__btn">
+                  <span class="btn__text">Замовити</span>
+                  <span class="btn__overlay"></span>
+                </button>
               </div>
-              <div data-i class="product-header__package">
-                <span class="h4 product-header__h4">Пакування:</span>
-                <span class="product-header__text">індивідуальне (поліетиленовий пакет).</span>
-              </div>
-              <div data-i class="product-header__weight">
-                <span class="h4 product-header__h4">Вага:</span>
-                <span class="product-header__text">різного калібру, від 2,0 кг до 2,6 кг: 2,0 кг/2,1 кг/2,2 кг/2,3 кг/2,4 кг/2,5 кг/2,6 кг.</span>
-              </div>
-              <div data-i class="product-header__price">Вартість за 1 шт. — <span>від 250 грн</span></div>
-              <button data-i class="btn product-header__btn">
-                <span class="btn__text">Замовити</span>
-                <span class="btn__overlay"></span>
-              </button>
             </div>
           </div>
         </header>
