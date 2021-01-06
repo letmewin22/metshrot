@@ -65,10 +65,20 @@ body {
   }
 }
 
-.bs-item__text {
+.bs-item__text,
+.bs-item__small-text {
   max-width: 648px;
   @include media('<=#{$br2}') {
     max-width: size(1548, 305);
+  }
+}
+
+.bs-item__small-text {
+  font-size: $def-size;
+  line-height: 1.5em;
+  margin-top: 24px;
+  p + p {
+    margin-top: size(32, 24);
   }
 }
 

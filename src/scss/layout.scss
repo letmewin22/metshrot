@@ -13,6 +13,9 @@
     @include media('<=#{$br2}') {
       flex-direction: column;
     }
+    &--center {
+      align-items: center;
+    }
   }
   @include media('<=#{$ls}') {
     padding-left: size(60, 20);

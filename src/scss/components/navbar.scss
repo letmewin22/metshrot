@@ -14,6 +14,49 @@
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
+.navbar__left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__lang {
+  margin-left: size(66, 20);
+  @include stroke-link;
+  cursor: pointer;
+  svg {
+    width: 14px !important;
+    height: 7px !important;
+    margin-left: size(10, 7) !important;
+    @include media('<=#{$br3}') {
+      path {
+        stroke: var(--black);
+      }
+    }
+  }
+}
+
+.navbar__lang-current {
+  pointer-events: none;
+}
+
+.navbar__lang-content {
+  @include media('<=#{$br2}') {
+    position: absolute;
+    &.opened {
+      height: calc(var(--h) + 24px);
+      .navbar__lang-link {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+.navbar__lang-links {
+  @include media('<=#{$br2}') {
+    padding-top: 0px;
+  }
+}
+
 .navbar__container {
   display: flex;
   justify-content: space-between;

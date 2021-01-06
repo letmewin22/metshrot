@@ -1,0 +1,95 @@
+{% set title = "about" %}
+{% set route = "about" %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  <header class="header about-header">
+    <div class="container about-header__container">
+      <div class="about-header__container-top">
+        <div data-section-parallax="-0.2" class="about-header__content">
+          <h1 data-i class="h1 about-header__h1">METSHROT — офіційний імпортер м’ясної продукції польского виробничого концерну Grupa Cedrob.</h1>
+        </div>
+      </div>
+      <div data-img="-1" class="about-header__container-bottom">
+        <div data-img="1" class="parallax-wrapper about-header__parallax-wrapper">
+          <div data-parallax='0.3' class="img-wrapper about-header__img-wrapper">
+            <div data-parallax='-0.2' class="img about-header__img" style="background-image: url('./img/home.jpg')"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="bs-item">
+      <div class="container bs-item__container">
+        <h2 class="h2 bs-item__h">Наша історія</h2>
+        <div class="bs-item__small-text">
+          <p>Ми розпочали розпочали діяльність з імпорту курячого фаршу у 2015 році. Згодом, у 2019 році почали привозити до України інші види птиці та м’ясо дикого звіра: курчат-халяль, качку, гусака, оленину та косулю.</p>
+          <p> Працюємо з HoReCa, торговими продуктовими мережами, а також пропонуємо дрібний опт для роздрібних покупців.</p>
+        </div>
+      </div>
+    </div>
+    <section class='section partnership'>
+      <div class='container full-container full-container--no-left-margin section__container partnership__container'>
+        <div class="full-container__left">
+          <div class="parallax-wrapper">
+            <div data-parallax='0.3' class="img-wrapper partnership__img-wrapper">
+              <div data-parallax='-0.2' data-scale='1.1' class="img partnership__img" style="background-image: url('./img/home.jpg')"></div>
+            </div>
+          </div>
+        </div>
+        <div class="full-container__right ">
+          <div class="partnership__content">
+            <h2 class="h2 partnership__h2">Імпортуємо м’ясо від лідера ринку</h2>
+            <div class="partnership__text">
+              <p>Наша візитна картка — продукція польского виробника Cedrob. Наразі він є найбільшим польським виробником м'яса птиці майже з 30-річним досвідом.</p>
+              <p>Завдяки замкнутому виробничому циклу «від поля до столу», виробник контролює всі етапи виробничого процесу.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section advantages'>
+      <div class='container section__container'>
+        <h2 class="h2 sw">Чому Cedrob?</h2>
+        <ul class="advantages__ul">
+          <li class="container advantages__container nm flex flex--center advantages__li">
+            <div class="container__left">
+              <span class="advantages__count">001</span>
+            </div>
+            <div class="container__right container__right">
+              <p class="advantages__text">Найбільший виробник м'яса птиці в Польщі</p>
+            </div>
+          </li>
+          <li class="container advantages__container nm flex flex--center advantages__li">
+            <div class="container__left">
+              <span class="advantages__count">002</span>
+            </div>
+            <div class="container__right container__right">
+              <p class="advantages__text">Продукція постачається майже в 60 країн</p>
+            </div>
+          </li>
+          <li class="container advantages__container nm flex flex--center advantages__li">
+            <div class="container__left">
+              <span class="advantages__count">003</span>
+            </div>
+            <div class="container__right container__right">
+              <p class="advantages__text">30-річний досвід виробництва птиці</p>
+            </div>
+          </li>
+          <li class="container advantages__container nm flex flex--center advantages__li">
+            <div class="container__left">
+              <span class="advantages__count">004</span>
+            </div>
+            <div class="container__right container__right">
+              <p class="advantages__text">Власні філіали у 5 країнах Європи</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    {% include "partials/_cta.html" %}
+  </main>
+  {% include "partials/_footer.html" %}
+{% endblock %}

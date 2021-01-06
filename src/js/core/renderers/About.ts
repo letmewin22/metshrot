@@ -1,8 +1,18 @@
 import Highway from '@dogstudio/highway'
+import {PageLoader} from '@/components/loaders/PageLoader'
+import {Parallax} from '@/components/Parallax'
+import {onLoaded} from '@/utils/onLoaded'
 
 export default class About extends Highway.Renderer {
+  p: typeof Parallax.prototype
 
   onEnterCompleted(): void {
-    console.log('Hello from About')
+    onLoaded(() => {
+      PageLoader.load()
+      this.p = new Parallax()
+    })
+  }
+  onLeaveCompleted(): void {
+    this.p.destroy()
   }
 }

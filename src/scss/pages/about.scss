@@ -1,0 +1,42 @@
+.about-header {
+  min-height: 100vh;
+  min-height: var(--vh);
+  height: auto;
+}
+
+.about-header__container {
+  padding-top: size(172, 94);
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.about-header__container-top {
+  padding-left: size(160, 20);
+  padding-right: size(160, 20);
+}
+
+.about-header__container-bottom {
+  margin-top: size(90, 52);
+  height: 100vh;
+  height: var(--vh);
+  min-height: 500px;
+  width: 100%;
+  @include media('<=#{$br4}') {
+    height: 60vh;
+    min-height: 350px;
+  }
+}
+
+.about-header__parallax-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.about-header__img-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.about-header__img {
+  width: 100%;
+  height: 100%;
+}

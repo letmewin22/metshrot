@@ -13,3 +13,11 @@ export const production = (): Promise<any> => {
 export const product = (): Promise<any> => {
   return import(/* webpackChunkName: "product" */ './Product')
 }
+
+export const contacts = (): Promise<any> => {
+  return import(/* webpackChunkName: "contacts" */ './Contacts')
+}
+
+export const error = (): Promise<any> => {
+  return import(/* webpackChunkName: "error" */ './Error')
+}
