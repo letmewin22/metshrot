@@ -14,7 +14,7 @@
     <link rel="preload" href="./fonts/PTRootUI_Regular.woff2" type="font/woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/PT_Mono.woff2" type="font/woff" as="font" crossorigin="anonymous">
     <!-- BEGIN styles -->
-    <link rel="stylesheet" media="all" href="css/app.e1609923032070.css">
+    <link rel="stylesheet" media="all" href="css/app.e1610092754490.css">
     <!-- END styles -->
   </head>
   <body class="e-fixed">
@@ -42,7 +42,6 @@
             </div>
             <div class="dropdown__content navbar__lang-content">
               <div class="dropdown__links navbar__lang-links">
-                <a class="dropdown__link navbar__lang-link" href="./service">En</a>
                 <a class="dropdown__link navbar__lang-link" href="./service">Ua</a>
                 <a class="dropdown__link navbar__lang-link" href="./service">Ru</a>
               </div>
@@ -80,7 +79,7 @@
       <div class="navbar__mobile-nav"></div>
     </div>
     <div id="scroll-container" class="site-wrapper" data-router-wrapper>
-      <div data-router-view="about">
+      <div data-current-lang="Ru" data-translate-urls="http:/localhost:8080,http:/localhost:60" data-router-view="about">
         <header class="header about-header">
           <div class="container about-header__container">
             <div class="about-header__container-top">
@@ -165,6 +164,48 @@
                 </li>
               </ul>
             </div>
+          </section>
+          <section class='section business-dir'>
+            <div class='container section__container business-dir__container flex'>
+              <div class="container__left business-dir__container-left">
+                <div class="business-dir__left-content sticky">
+                  <h2 class="h2">Напрями нашого бізнесу</h2>
+                </div>
+              </div>
+              <div class="container__right business-dir__container-right">
+                <div class="business-dir__production">
+                  <div class="business-dir__item">
+                    <div class="business-dir__item-top">
+                      <h3 class="business-dir__item-h">Імпорт птиці в Україні</h3>
+                      <a class="circle-link business-dir__link" href="./production">
+                        <span class="circle-link__circle"></span>
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L15.707 6.29279C15.8945 6.48031 15.9998 6.73462 15.9998 6.99979C15.9998 7.26495 15.8945 7.51926 15.707 7.70679L9.707 13.7068C9.5184 13.8889 9.2658 13.9897 9.0036 13.9875C8.7414 13.9852 8.49059 13.88 8.30518 13.6946C8.11977 13.5092 8.0146 13.2584 8.01233 12.9962C8.01005 12.734 8.11084 12.4814 8.293 12.2928L12.586 7.99979H1C0.734784 7.99979 0.48043 7.89443 0.292893 7.70689C0.105357 7.51936 0 7.265 0 6.99979C0 6.73457 0.105357 6.48022 0.292893 6.29268C0.48043 6.10514 0.734784 5.99979 1 5.99979H12.586L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#130F10" />
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="business-dir__item-bottom">
+                      <p>Пропонуємо широкий асортимент продукції із курячого, качиного та гусячого м’яса від польского виробника Cedrob. Завдяки європейському підходу до виробництва, птиця зберігає свіжість та соковитість — це вже оцінили відомі українські ресторатори.</p>
+                      <p>Також, ми лідер в Україні з імпорту курчат-халяль. Халяльна продукція Cedrob має сертифікат відповідності, що дозволяє експортувати її до мусульманських країн — це свідчить про високу якість та смакові характеристики птиці.</p>
+                    </div>
+                  </div>
+                  <div class="business-dir__item">
+                    <div class="business-dir__item-top">
+                      <h3 class="business-dir__item-h">Імпорт дичини в Україні</h3>
+                      <a class="circle-link business-dir__link" href="./production">
+                        <span class="circle-link__circle"></span>
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L15.707 6.29279C15.8945 6.48031 15.9998 6.73462 15.9998 6.99979C15.9998 7.26495 15.8945 7.51926 15.707 7.70679L9.707 13.7068C9.5184 13.8889 9.2658 13.9897 9.0036 13.9875C8.7414 13.9852 8.49059 13.88 8.30518 13.6946C8.11977 13.5092 8.0146 13.2584 8.01233 12.9962C8.01005 12.734 8.11084 12.4814 8.293 12.2928L12.586 7.99979H1C0.734784 7.99979 0.48043 7.89443 0.292893 7.70689C0.105357 7.51936 0 7.265 0 6.99979C0 6.73457 0.105357 6.48022 0.292893 6.29268C0.48043 6.10514 0.734784 5.99979 1 5.99979H12.586L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#130F10" />
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="business-dir__item-bottom">
+                      <p>Привозимо до України дичину від Gobarto Dziczyzna — польського виробника, який належить групі компаній Gobarto S.A, що є частиною Cedrob Capital Group. Дичина отримується тільки з польських лісів і полів від мисливців через власну мережу закупівельних центрів.</p>
+                      <p>Найвищий рівень м'яса дичини підтверджений сертифікатами систем якості: IFS, BRC, додатково підтверджених знаком Docen Polskie — Top Product. За більш ніж 20 років роботи Gobarto Dziczyzna зайняла лідируючі позиції на внутрішньому ринку та в експорті польської дичини.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </section>
           <section class='section cta'>
             <div class='container section__container full-container last'>
@@ -266,9 +307,9 @@
       </div>
     </div>
     <!-- BEGIN scripts -->
-    <script src="./js/runtime-app.a218726f.js"></script>
-    <script src="./js/vendors~app.1ce7923b.chunk.js"></script>
-    <script src="./js/app.a9efab38.chunk.js"></script>
+    <script src="./js/runtime-app.27d52625.js"></script>
+    <script src="./js/vendors~app.72961d49.chunk.js"></script>
+    <script src="./js/app.9e6b7ec4.chunk.js"></script>
     <!-- END scripts -->
   </body>
 </html>
