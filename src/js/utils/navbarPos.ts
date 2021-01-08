@@ -1,10 +1,10 @@
-import {state} from '@emotionagency/smoothscroll'
 import {raf} from '@emotionagency/utils'
 import {isFixed} from './isFixed'
 
 export default class NavbarPos {
   mouseFunc: (e: any) => any
   scrollPos: number
+  $sc: HTMLElement = document.querySelector('#scroll-container')
 
   constructor() {
     this.mouseFunc = (e: any) => {
@@ -25,7 +25,7 @@ export default class NavbarPos {
 
   scrollNav(): void {
     const b = {
-      top: -state.scrolled
+      top: -this.$sc.scrollTop
     }
     if (b.top > this.scrollPos || isFixed()) {
       document.body.classList.remove('nav-hidden')
@@ -39,7 +39,7 @@ export default class NavbarPos {
       document.querySelector('.navbar').classList.add('remove-bg')
     }
 
-    this.scrollPos = -state.scrolled
+    this.scrollPos = -this.$sc.scrollTop
   }
 
   destroy(): void {

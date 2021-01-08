@@ -89,7 +89,39 @@
         </ul>
       </div>
     </section>
-    {% include "partials/_cta.html" %}
-  </main>
-  {% include "partials/_footer.html" %}
-{% endblock %}
+    <section class='section business-dir'>
+      <div class='container section__container business-dir__container flex'>
+        <div class="container__left business-dir__container-left">
+          <div class="business-dir__left-content sticky">
+            <h2 class="h2">Напрями нашого бізнесу</h2>
+          </div>
+        </div>
+        <div class="container__right business-dir__container-right">
+          <div class="business-dir__production">
+            <div class="business-dir__item">
+              <div class="business-dir__item-top">
+                <h3 class="business-dir__item-h">Імпорт птиці в Україні</h3>
+                {{mixins.circleLink('business-dir__link', './production')}}
+              </div>
+              <div class="business-dir__item-bottom">
+                <p>Пропонуємо широкий асортимент продукції із курячого, качиного та гусячого м’яса від польского виробника Cedrob. Завдяки європейському підходу до виробництва, птиця зберігає свіжість та соковитість — це вже оцінили відомі українські ресторатори.</p>
+                <p>Також, ми лідер в Україні з імпорту курчат-халяль. Халяльна продукція Cedrob має сертифікат відповідності, що дозволяє експортувати її до мусульманських країн — це свідчить про високу якість та смакові характеристики птиці.</p>
+              </div>
+            </div>
+            <div class="business-dir__item">
+              <div class="business-dir__item-top">
+                <h3 class="business-dir__item-h">Імпорт дичини в Україні</h3>
+                {{mixins.circleLink('business-dir__link', './production')}}
+              </div>
+              <div class="business-dir__item-bottom">
+                <p>Привозимо до України дичину від Gobarto Dziczyzna — польського виробника, який належить групі компаній Gobarto S.A, що є частиною Cedrob Capital Group. Дичина отримується тільки з польських лісів і полів від мисливців через власну мережу закупівельних центрів.</p>
+                <p>Найвищий рівень м'яса дичини підтверджений сертифікатами систем якості: IFS, BRC, додатково підтверджених знаком Docen Polskie — Top Product. За більш ніж 20 років роботи Gobarto Dziczyzna зайняла лідируючі позиції на внутрішньому ринку та в експорті польської дичини.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% include "partials/_cta.html" %}
+    </main>
+    {% include "partials/_footer.html" %}
+  {% endblock %}

@@ -14,6 +14,7 @@ import Dropdown from '@/components/Dropdown'
 import {Nav} from '@/components/Nav'
 import {intersectionOvserver} from '@/utils/intersectionOvserver'
 import {Loader} from '@/components/loaders/Loader'
+import {lang} from '@/components/lang'
 
 export const render = <T>(H: T): void => {
   process.env.NODE_ENV === 'production' && cssWebP()
@@ -81,7 +82,7 @@ export const render = <T>(H: T): void => {
     new Form('#form', {
       URL: 'http://localhost:8080/api/mail.php'
     })
-
+    lang()
     links.forEach((link: HTMLLinkElement) => {
       link.classList.remove('is-active')
       link.href === location.href && link.classList.add('is-active')

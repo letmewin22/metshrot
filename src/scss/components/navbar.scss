@@ -119,6 +119,9 @@
     margin-top: 24px;
   }
   @include stroke-link;
+  a.is-active {
+    color: var(--accent);
+  }
 }
 
 .dropdown__btn {

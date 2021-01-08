@@ -12,7 +12,7 @@ class Home extends Highway.Renderer {
       this.p = new Parallax()
     })
   }
-  onLeaveCompleted(): void {
+  onLeave(): void {
     this.p.destroy()
   }
 }

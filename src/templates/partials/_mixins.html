@@ -5,8 +5,8 @@
   </button>
 {% endmacro %}
 
-{% macro link(text, selector, href = "#") %}
-  <a href="{{href}}" class="btn {{selector}}">
+{% macro link(text, selector, data, href = "#") %}
+  <a {{data|safe}} href="{{href}}" class="btn {{selector}}">
     <span class="btn__text">{{text}}</span>
     <span class="btn__overlay"></span>
   </a>

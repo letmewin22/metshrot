@@ -40,3 +40,29 @@
   width: 100%;
   height: 100%;
 }
+
+.business-dir__production {
+  background-color: #fff;
+}
+.business-dir__item {
+  padding: size(40, 32) size(52, 20);
+  border-bottom: 1px solid #dbdbdb;
+  &:last-child {
+    border: none;
+  }
+}
+.business-dir__item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.business-dir__item-h {
+  @include reg;
+  font-size: size(30, 18);
+}
+.business-dir__item-bottom {
+  margin-top: 24px;
+  p + p {
+    margin-top: 1.5em;
+  }
+}

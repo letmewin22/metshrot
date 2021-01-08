@@ -1,11 +1,11 @@
 import {raf, resize} from '@emotionagency/utils'
-import {state} from '@emotionagency/smoothscroll'
 
 export class Parallax {
   $els = document.querySelectorAll('[data-parallax]') as NodeListOf<HTMLElement>
   $sections = document.querySelectorAll(
     '[data-section-parallax]'
   ) as NodeListOf<HTMLElement>
+  $sc: HTMLElement = document.querySelector('#scroll-container')
   sizes = [] as number[]
 
   constructor() {
@@ -42,7 +42,7 @@ export class Parallax {
       this.$els.forEach(($el, i) => {
         const coef = +$el.dataset.parallax
         const start = this.sizes[i] - this.sizes[i] * (1 + coef)
-        const end = state.scrolled * coef
+        const end = this.$sc.scrollTop * coef
         const scale = $el.dataset.scale ? +$el.dataset.scale : 1
         this.move($el, start + end, scale)
       })
@@ -52,7 +52,7 @@ export class Parallax {
     this.$sections.length &&
       this.$sections.forEach($el => {
         const coef = +$el.dataset.sectionParallax
-        const target = state.scrolled * coef
+        const target = this.$sc.scrollTop * coef
         this.move($el, target)
       })
   }
@@ -80,5 +80,15 @@ export class Parallax {
   destroy(): void {
     resize.off(this.resize)
     raf.off(this.animate)
+
+    this.$sections.length &&
+      this.$sections.forEach($el => {
+        this.move($el, 0)
+      })
+
+    this.$els.length &&
+      this.$els.forEach($el => {
+        this.move($el, 0, 1)
+      })
   }
 }
