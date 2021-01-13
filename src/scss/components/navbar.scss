@@ -57,6 +57,13 @@
   }
 }
 
+.navbar__lang-link {
+  &.is-active {
+    color: var(--accent) !important;
+    pointer-events: none !important;
+  }
+}
+
 .navbar__container {
   display: flex;
   justify-content: space-between;

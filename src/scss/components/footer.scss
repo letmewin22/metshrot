@@ -32,6 +32,12 @@
   margin-left: 0px;
 }
 
+.footer__container-left {
+  @include media('>#{$br2}') {
+    height: var(--vh);
+  }
+}
+
 .footer__adress {
   font-size: size(24, 18);
   margin-top: size(60, 32);

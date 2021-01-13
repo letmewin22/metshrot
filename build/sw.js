@@ -1,4 +1,4 @@
-importScripts("./js/precache-manifest.0ccdba3d1673e1ee6ce6a6dbfd119853.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("/metshrot/wp-content/themes/metshrot/js/precache-manifest.8bffd637aab00b474f482dd051955e14.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 if (workbox) {
   console.log('Yay! Workbox is loaded !')
