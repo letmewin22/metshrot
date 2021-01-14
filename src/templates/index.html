@@ -19,7 +19,7 @@
         <div data-section-parallax="-0.2" class="home-header__content">
           <span data-i class="descriptor home-header__descriptor">Без ГМО, антибіотиків та глютену</span>
           <h1 data-i class="h1 home-header__h1">Постачаємо заморожене м'ясо птиці та&nbsp;дичини</h1>
-          {{mixins.link('Переглянути продукцію', 'home-header__btn', 'data-i', href="./production")}}
+          {{mixins.link('Переглянути продукцію', 'home-header__btn', 'data-i data-href="#production"', href="#")}}
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <section class='section our-product'>
+    <section id="production" class='section our-product'>
       <div class='container section__container our-product__container flex'>
         <div class="container__left our-product__container-left">
           <div class="our-product__left-content sticky">
@@ -168,7 +168,7 @@
             <div class="partnership__text">
               <p>Ми — надійний постачальник м’ясної замороженої продукції. Пропонуємо співпрацю рестораторам, торговим мережам, закладам громадського харчування, виробникам ковбасної продукції та споживачам (опт/дрібний опт).</p>
             </div>
-            {{mixins.link('Переглянути продукцію', 'partnership__btn', href="#")}}
+            {{mixins.link('Переглянути продукцію', 'partnership__btn', 'data-href="#production"', href="#")}}
           </div>
         </div>
       </div>

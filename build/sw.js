@@ -1,4 +1,4 @@
-importScripts("/metshrot/wp-content/themes/metshrot/js/precache-manifest.8bffd637aab00b474f482dd051955e14.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("/wp-content/themes/metshrot/js/precache-manifest.34d851ce03717a4639f5fae19017fc9a.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 if (workbox) {
   console.log('Yay! Workbox is loaded !')

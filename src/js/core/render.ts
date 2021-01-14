@@ -15,6 +15,7 @@ import {Nav} from '@/components/Nav'
 import {intersectionOvserver} from '@/utils/intersectionOvserver'
 import {Loader} from '@/components/loaders/Loader'
 import {lang} from '@/components/lang'
+import {anchors} from '@/anchors'
 
 export const render = <T>(H: T): void => {
   process.env.NODE_ENV === 'production' && cssWebP()
@@ -74,6 +75,7 @@ export const render = <T>(H: T): void => {
   const links = document.querySelectorAll('nav a')
 
   hooks.useBoth(async() => {
+    anchors()
     const {default: Form} = await import(
       /* webpackChunkName: "form" */
       '@emotionagency/form'

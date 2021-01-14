@@ -28,7 +28,7 @@ function createConfig(env) {
         ? '[name].[contenthash:8].chunk.js'
         : '[name].chunk.js',
       path: path.resolve(__dirname, 'build/js/'),
-      publicPath: '/metshrot/wp-content/themes/metshrot/js/'
+      publicPath: '/wp-content/themes/metshrot/js/'
       // publicPath: './js/'
     },
     resolve: {
