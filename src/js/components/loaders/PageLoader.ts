@@ -5,6 +5,7 @@ export class PageLoader {
     const img = document.querySelector('[data-img="1"]')
     const imgWrapper = document.querySelector('[data-img="-1"]')
     const items = document.querySelectorAll('[data-i]')
+    const itemsO = document.querySelectorAll('[data-o]')
 
     const tl = gsap.timeline({
       onComplete: () => {
@@ -41,6 +42,16 @@ export class PageLoader {
           opacity: 1,
           ease: 'power2.out',
           stagger: 0.2
+        },
+        0.4
+      )
+    itemsO &&
+      tl.to(
+        itemsO,
+        {
+          duration: 1,
+          opacity: 1,
+          ease: 'power2.inOut'
         },
         0.4
       )

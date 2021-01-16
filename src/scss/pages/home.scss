@@ -281,5 +281,7 @@
 .about-company__container-right {
   width: 100%;
   margin-left: 0px;
-  margin-top: size(40, 32);
+  @include media('<=#{$br2}') {
+    margin-top: size(40, 32);
+  }
 }

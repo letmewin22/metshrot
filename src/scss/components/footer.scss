@@ -36,6 +36,14 @@
   @include media('>#{$br2}') {
     height: var(--vh);
   }
+  @include media('<=#{$br2}') {
+    height: 50vh;
+    min-height: 500px;
+    margin-top: 52px;
+  }
+  @include media('<=#{$br4}') {
+    min-height: 350px;
+  }
 }
 
 .footer__adress {

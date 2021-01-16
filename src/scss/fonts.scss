@@ -7,6 +7,12 @@
   margin-top: -0.25em;
 }
 
+[data-lang='ru'] {
+  .h2 {
+    font-size: size(72, 32);
+  }
+}
+
 .h3 {
   @include reg;
   font-size: size(40, 24);

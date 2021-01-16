@@ -82,7 +82,7 @@ export const render = <T>(H: T): void => {
     )
 
     new Form('#form', {
-      URL: 'http://localhost:8080/api/mail.php'
+      URL: '/wp-content/themes/metshrot/api/mail/mail.php'
     })
     lang()
     links.forEach((link: HTMLLinkElement) => {
