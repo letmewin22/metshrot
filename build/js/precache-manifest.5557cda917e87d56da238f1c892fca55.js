@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wp-content/themes/metshrot/js/about~home~product~production.dad4a2ab.chunk.js"
   },
   {
-    "revision": "867cd40f9d7189f58a85",
-    "url": "/wp-content/themes/metshrot/js/app.4aeda870.chunk.js"
+    "revision": "08fd28f4f995fe5e9dad",
+    "url": "/wp-content/themes/metshrot/js/app.9687edc0.chunk.js"
   },
   {
     "revision": "98fd0b87320c6bbba62c",

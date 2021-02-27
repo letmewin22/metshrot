@@ -17,6 +17,12 @@ import {Loader} from '@/components/loaders/Loader'
 import {lang} from '@/components/lang'
 import {anchors} from '@/anchors'
 
+declare global {
+  interface Window {
+    dataLayer: any
+  }
+}
+
 export const render = <T>(H: T): void => {
   process.env.NODE_ENV === 'production' && cssWebP()
 
@@ -82,7 +88,8 @@ export const render = <T>(H: T): void => {
     )
 
     new Form('#form', {
-      URL: '/wp-content/themes/metshrot/api/mail/mail.php'
+      URL: '/wp-content/themes/metshrot/api/mail/mail.php',
+      onSuccess: () => window.dataLayer.push({event: 'form_sent'})
     })
     lang()
     links.forEach((link: HTMLLinkElement) => {
