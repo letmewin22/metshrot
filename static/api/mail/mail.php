@@ -52,7 +52,7 @@ $mail->setFrom($username);
 $mail->addAddress($recipient_mail);
 $mail->isHTML(true);
 
-$mail->Subject = 'Тестовая заявка';
+$mail->Subject = 'Заявка с сайта Metshrot';
 $mail->Body    = $message;
 $mail->AltBody = '';
 
